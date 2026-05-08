@@ -70,19 +70,47 @@ var GALLERY_PHOTOS = [
   { src: 'public/images/shower-doors/showerdoor-45.jpg', cat: 'shower', alt: 'Custom shower enclosure NJ' },
   { src: 'public/images/shower-doors/showerdoor-46.jpg', cat: 'shower', alt: 'Glass shower door install NJ' },
   { src: 'public/images/shower-doors/showerdoor-47.jpg', cat: 'shower', alt: 'Frameless shower glass NJ' },
+  { src: 'public/images/shower-doors/showerdoor-48.jpg', cat: 'shower', alt: 'Custom shower door NJ' },
 
   // ── MIRRORS ───────────────────────────────────────────────
-  // Add your mirror photos here when ready
+  { src: 'public/images/mirrors/mirror-1.jpg',  cat: 'mirror', alt: 'Custom mirror installation' },
+  { src: 'public/images/mirrors/mirror-2.jpg',  cat: 'mirror', alt: 'Bathroom mirror NJ' },
+  { src: 'public/images/mirrors/mirror-3.jpg',  cat: 'mirror', alt: 'Frameless mirror' },
+  { src: 'public/images/mirrors/mirror-4.jpg',  cat: 'mirror', alt: 'Custom vanity mirror' },
+  { src: 'public/images/mirrors/mirror-5.jpg',  cat: 'mirror', alt: 'Glass mirror installation' },
+  { src: 'public/images/mirrors/mirror-6.jpg',  cat: 'mirror', alt: 'Custom mirror NJ' },
+  { src: 'public/images/mirrors/mirror-7.jpg',  cat: 'mirror', alt: 'Bathroom mirror installation' },
+  { src: 'public/images/mirrors/mirror-8.jpg',  cat: 'mirror', alt: 'Frameless vanity mirror' },
+  { src: 'public/images/mirrors/mirror-9.jpg',  cat: 'mirror', alt: 'Custom glass mirror' },
+  { src: 'public/images/mirrors/mirror-10.jpg', cat: 'mirror', alt: 'Mirror installation NJ' },
+  { src: 'public/images/mirrors/mirror-11.jpg', cat: 'mirror', alt: 'Custom frameless mirror' },
+  { src: 'public/images/mirrors/mirror-12.jpg', cat: 'mirror', alt: 'Bathroom vanity mirror' },
+  { src: 'public/images/mirrors/mirror-13.jpg', cat: 'mirror', alt: 'Glass mirror NJ' },
+  { src: 'public/images/mirrors/mirror-14.jpg', cat: 'mirror', alt: 'Custom mirror project' },
+  { src: 'public/images/mirrors/mirror-15.jpg', cat: 'mirror', alt: 'Frameless bathroom mirror' },
+  { src: 'public/images/mirrors/mirror-16.jpg', cat: 'mirror', alt: 'Vanity mirror installation' },
+  { src: 'public/images/mirrors/mirror-17.jpg', cat: 'mirror', alt: 'Custom mirror install NJ' },
+  { src: 'public/images/mirrors/mirror-18.jpg', cat: 'mirror', alt: 'Glass vanity mirror' },
+  { src: 'public/images/mirrors/mirror-19.jpg', cat: 'mirror', alt: 'Frameless mirror NJ' },
+  { src: 'public/images/mirrors/mirror-20.jpg', cat: 'mirror', alt: 'Custom bathroom mirror' },
+  { src: 'public/images/mirrors/mirror-21.jpg', cat: 'mirror', alt: 'Mirror project NJ' },
 
   // ── GLASS RAILINGS ────────────────────────────────────────
   { src: 'public/images/railings/railing-1.jpg', cat: 'railing', alt: 'Glass railing installation' },
   { src: 'public/images/railings/railing-2.jpg', cat: 'railing', alt: 'Deck glass railing NJ' },
+  { src: 'public/images/railings/railing-3.jpg', cat: 'railing', alt: 'Modern glass balustrade NJ' },
 
   // ── OFFICE PARTITIONS ─────────────────────────────────────
-  { src: 'public/images/office/office-1.jpg', cat: 'office', alt: 'Office glass partition' },
-  { src: 'public/images/office/office-2.jpg', cat: 'office', alt: 'Commercial glass partition' },
-  { src: 'public/images/office/office-3.jpg', cat: 'office', alt: 'Glass office divider' },
-  { src: 'public/images/office/office-4.jpg', cat: 'office', alt: 'Office glass installation' },
+  { src: 'public/images/office/office-1.jpg',  cat: 'office', alt: 'Office glass partition' },
+  { src: 'public/images/office/office-2.jpg',  cat: 'office', alt: 'Commercial glass partition' },
+  { src: 'public/images/office/office-3.jpg',  cat: 'office', alt: 'Glass office divider' },
+  { src: 'public/images/office/office-4.jpg',  cat: 'office', alt: 'Office glass installation' },
+  { src: 'public/images/office/office-5.jpg',  cat: 'office', alt: 'Glass partition NJ' },
+  { src: 'public/images/office/office-6.jpg',  cat: 'office', alt: 'Commercial glass wall' },
+  { src: 'public/images/office/office-7.jpg',  cat: 'office', alt: 'Office glass wall NJ' },
+  { src: 'public/images/office/office-8.jpg',  cat: 'office', alt: 'Glass office partition NJ' },
+  { src: 'public/images/office/office-9.jpg',  cat: 'office', alt: 'Commercial partition install' },
+  { src: 'public/images/office/office-10.jpg', cat: 'office', alt: 'Office glass installation NJ' },
 
   // ── EXTERIOR SOLUTIONS ────────────────────────────────────
   // Add your exterior/storefront photos here when ready
