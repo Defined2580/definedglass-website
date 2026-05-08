@@ -93,7 +93,6 @@ var GALLERY_PHOTOS = [
   { src: 'public/images/mirrors/mirror-18.jpg', cat: 'mirror', alt: 'Glass vanity mirror' },
   { src: 'public/images/mirrors/mirror-19.jpg', cat: 'mirror', alt: 'Frameless mirror NJ' },
   { src: 'public/images/mirrors/mirror-20.jpg', cat: 'mirror', alt: 'Custom bathroom mirror' },
-  { src: 'public/images/mirrors/mirror-21.jpg', cat: 'mirror', alt: 'Mirror project NJ' },
 
   // ── GLASS RAILINGS ────────────────────────────────────────
   { src: 'public/images/railings/railing-1.jpg', cat: 'railing', alt: 'Glass railing installation' },
@@ -113,6 +112,11 @@ var GALLERY_PHOTOS = [
   { src: 'public/images/office/office-10.jpg', cat: 'office', alt: 'Office glass installation NJ' },
 
   // ── EXTERIOR SOLUTIONS ────────────────────────────────────
-  // Add your exterior/storefront photos here when ready
+  { src: 'public/images/exterior/exterior-1.jpg', cat: 'exterior', alt: 'Exterior glass installation NJ' },
+  { src: 'public/images/exterior/exterior-2.jpg', cat: 'exterior', alt: 'Commercial exterior glass' },
+  { src: 'public/images/exterior/exterior-3.jpg', cat: 'exterior', alt: 'Storefront glass NJ' },
+  { src: 'public/images/exterior/exterior-4.jpg', cat: 'exterior', alt: 'Glass storefront installation' },
+  { src: 'public/images/exterior/exterior-5.jpg', cat: 'exterior', alt: 'Exterior glass solution' },
+  { src: 'public/images/exterior/exterior-6.jpg', cat: 'exterior', alt: 'Commercial glass storefront NJ' },
 
 ];
