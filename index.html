@@ -7,7 +7,16 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script>
+  <!-- Lightbox overlay -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.93);align-items:center;justify-content:center;" onclick="if(event.target===this)closeLightbox()">
+  <button onclick="closeLightbox()" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;z-index:10;opacity:.8;">&#x2715;</button>
+  <button id="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:85vh;object-fit:contain;border-radius:6px;display:block;user-select:none;" />
+  <button id="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
+  <div id="lightbox-caption" style="position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.6);font-size:.8rem;pointer-events:none;"></div>
+</div>
+
+<script>
     tailwind.config = {
       theme: {
         extend: {
@@ -24,6 +33,7 @@
     }
   </script>
   <style>
+    html, body { overflow-x: hidden; }
     html { scroll-behavior: smooth; }
     body { font-family: 'Inter', sans-serif; color: #3d3d3d; }
     .btn-primary { display:inline-block; background:#00ADEF; color:#fff; padding:12px 28px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:.875rem; border-radius:4px; transition:background .2s; }
@@ -43,7 +53,22 @@
       #desktopNav { display:none !important; }
       #menuBtn { display:flex !important; }
       .top-bar-right { display:none; }
+      #galleryGrid { columns: 2 !important; }
     }
+    @media (max-width: 480px) {
+      #galleryGrid { columns: 1 !important; }
+    }
+    /* Lightbox */
+    #lightbox { touch-action: pan-y; }
+    #lightbox-prev, #lightbox-next {
+      position:absolute; top:50%; transform:translateY(-50%);
+      background:rgba(255,255,255,.18); border:none; color:#fff;
+      font-size:2rem; cursor:pointer; padding:10px 18px; border-radius:6px;
+      line-height:1; transition:background .2s; z-index:10;
+    }
+    #lightbox-prev:hover, #lightbox-next:hover { background:rgba(255,255,255,.35); }
+    #lightbox-prev { left:14px; }
+    #lightbox-next { right:14px; }
     .gallery-item img { transition:transform .5s; }
     .gallery-item:hover img { transform:scale(1.05); }
     .service-card { overflow:hidden; position:relative; }
@@ -837,6 +862,62 @@
       else { el.style.display = 'none'; }
     });
   }
+
+  // Wire up gallery clicks
+  document.querySelectorAll('.gallery-photo').forEach(function(el) {
+    el.onclick = function() { openLightbox(this); };
+  });
+
+  // Lightbox
+  var lbPhotos = [], lbIndex = 0;
+
+  function openLightbox(el) {
+    lbPhotos = Array.from(document.querySelectorAll('.gallery-photo')).filter(function(p) {
+      return p.style.display !== 'none';
+    });
+    lbIndex = lbPhotos.indexOf(el);
+    showLightboxPhoto();
+    var lb = document.getElementById('lightbox');
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxPhoto() {
+    var img = lbPhotos[lbIndex].querySelector('img');
+    document.getElementById('lightbox-img').src = img ? img.src : '';
+    document.getElementById('lightbox-img').alt = img ? img.alt : '';
+    document.getElementById('lightbox-caption').textContent =
+      (img ? img.alt : '') + '  (' + (lbIndex + 1) + ' / ' + lbPhotos.length + ')';
+  }
+
+  function lightboxNav(dir) {
+    lbIndex = (lbIndex + dir + lbPhotos.length) % lbPhotos.length;
+    showLightboxPhoto();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('lightbox').style.display === 'none') return;
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    else if (e.key === 'ArrowLeft') lightboxNav(-1);
+    else if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Touch swipe support for mobile
+  (function() {
+    var startX = 0;
+    var lb = document.getElementById('lightbox');
+    lb.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) lightboxNav(diff > 0 ? 1 : -1);
+    });
+  })();
 </script>
 </body>
 </html>
