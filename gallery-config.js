@@ -16,28 +16,73 @@
 
      Categories:  shower  |  mirror  |  railing  |  office  |  exterior
 
-  3. Save the file. Vercel auto-deploys within 60 seconds. Done!
+  3. Save the file. Vercel/GitHub auto-deploys within 60 seconds. Done!
   ============================================================
 */
 
 var GALLERY_PHOTOS = [
 
   // ── SHOWER DOORS ──────────────────────────────────────────
-  { src: 'images/shower-doors/shower-real-1.jpg', cat: 'shower', alt: 'Frameless shower enclosure' },
-  { src: 'images/shower-doors/shower-real-2.jpg', cat: 'shower', alt: 'Custom shower door' },
-  { src: 'images/shower-doors/shower-real-3.jpg', cat: 'shower', alt: 'Frameless shower panel' },
-  { src: 'images/shower-doors/shower-real-4.jpg', cat: 'shower', alt: 'Hinged glass shower door' },
+  { src: 'public/images/shower-doors/showerdoor-1.jpg',  cat: 'shower', alt: 'Frameless shower enclosure' },
+  { src: 'public/images/shower-doors/showerdoor-2.jpg',  cat: 'shower', alt: 'Custom shower door' },
+  { src: 'public/images/shower-doors/showerdoor-3.jpg',  cat: 'shower', alt: 'Frameless shower panel' },
+  { src: 'public/images/shower-doors/showerdoor-4.jpg',  cat: 'shower', alt: 'Hinged glass shower door' },
+  { src: 'public/images/shower-doors/showerdoor-5.jpg',  cat: 'shower', alt: 'Glass shower enclosure' },
+  { src: 'public/images/shower-doors/showerdoor-6.jpg',  cat: 'shower', alt: 'Custom frameless shower' },
+  { src: 'public/images/shower-doors/showerdoor-7.jpg',  cat: 'shower', alt: 'Shower door installation' },
+  { src: 'public/images/shower-doors/showerdoor-8.jpg',  cat: 'shower', alt: 'Glass shower door' },
+  { src: 'public/images/shower-doors/showerdoor-9.jpg',  cat: 'shower', alt: 'Frameless shower door' },
+  { src: 'public/images/shower-doors/showerdoor-10.jpg', cat: 'shower', alt: 'Custom glass shower' },
+  { src: 'public/images/shower-doors/showerdoor-11.jpg', cat: 'shower', alt: 'Shower enclosure' },
+  { src: 'public/images/shower-doors/showerdoor-12.jpg', cat: 'shower', alt: 'Glass shower panel' },
+  { src: 'public/images/shower-doors/showerdoor-13.jpg', cat: 'shower', alt: 'Frameless shower installation' },
+  { src: 'public/images/shower-doors/showerdoor-14.jpg', cat: 'shower', alt: 'Custom shower enclosure' },
+  { src: 'public/images/shower-doors/showerdoor-15.jpg', cat: 'shower', alt: 'Glass shower door install' },
+  { src: 'public/images/shower-doors/showerdoor-16.jpg', cat: 'shower', alt: 'Shower glass panel' },
+  { src: 'public/images/shower-doors/showerdoor-17.jpg', cat: 'shower', alt: 'Frameless glass shower' },
+  { src: 'public/images/shower-doors/showerdoor-18.jpg', cat: 'shower', alt: 'Shower door project' },
+  { src: 'public/images/shower-doors/showerdoor-19.jpg', cat: 'shower', alt: 'Custom shower door NJ' },
+  { src: 'public/images/shower-doors/showerdoor-20.jpg', cat: 'shower', alt: 'Glass shower installation' },
+  { src: 'public/images/shower-doors/showerdoor-21.jpg', cat: 'shower', alt: 'Shower enclosure NJ' },
+  { src: 'public/images/shower-doors/showerdoor-22.jpg', cat: 'shower', alt: 'Frameless shower door NJ' },
+  { src: 'public/images/shower-doors/showerdoor-23.jpg', cat: 'shower', alt: 'Glass shower panel install' },
+  { src: 'public/images/shower-doors/showerdoor-24.jpg', cat: 'shower', alt: 'Custom shower glass' },
+  { src: 'public/images/shower-doors/showerdoor-25.jpg', cat: 'shower', alt: 'Shower door project NJ' },
+  { src: 'public/images/shower-doors/showerdoor-26.jpg', cat: 'shower', alt: 'Frameless shower enclosure NJ' },
+  { src: 'public/images/shower-doors/showerdoor-27.jpg', cat: 'shower', alt: 'Glass shower installation NJ' },
+  { src: 'public/images/shower-doors/showerdoor-28.jpg', cat: 'shower', alt: 'Custom frameless shower NJ' },
+  { src: 'public/images/shower-doors/showerdoor-29.jpg', cat: 'shower', alt: 'Shower glass door' },
+  { src: 'public/images/shower-doors/showerdoor-30.jpg', cat: 'shower', alt: 'Shower door installation NJ' },
+  { src: 'public/images/shower-doors/showerdoor-31.jpg', cat: 'shower', alt: 'Glass shower enclosure install' },
+  { src: 'public/images/shower-doors/showerdoor-32.jpg', cat: 'shower', alt: 'Frameless shower glass' },
+  { src: 'public/images/shower-doors/showerdoor-33.jpg', cat: 'shower', alt: 'Custom shower door install' },
+  { src: 'public/images/shower-doors/showerdoor-34.jpg', cat: 'shower', alt: 'Shower enclosure glass' },
+  { src: 'public/images/shower-doors/showerdoor-35.jpg', cat: 'shower', alt: 'Glass shower door NJ' },
+  { src: 'public/images/shower-doors/showerdoor-36.jpg', cat: 'shower', alt: 'Frameless shower panel NJ' },
+  { src: 'public/images/shower-doors/showerdoor-37.jpg', cat: 'shower', alt: 'Shower glass panel NJ' },
+  { src: 'public/images/shower-doors/showerdoor-38.jpg', cat: 'shower', alt: 'Custom shower installation' },
+  { src: 'public/images/shower-doors/showerdoor-39.jpg', cat: 'shower', alt: 'Glass shower door project' },
+  { src: 'public/images/shower-doors/showerdoor-40.jpg', cat: 'shower', alt: 'Frameless shower door project' },
+  { src: 'public/images/shower-doors/showerdoor-41.jpg', cat: 'shower', alt: 'Custom glass shower door' },
+  { src: 'public/images/shower-doors/showerdoor-42.jpg', cat: 'shower', alt: 'Shower enclosure installation' },
+  { src: 'public/images/shower-doors/showerdoor-43.jpg', cat: 'shower', alt: 'Glass shower project NJ' },
+  { src: 'public/images/shower-doors/showerdoor-44.jpg', cat: 'shower', alt: 'Frameless shower install NJ' },
+  { src: 'public/images/shower-doors/showerdoor-45.jpg', cat: 'shower', alt: 'Custom shower enclosure NJ' },
+  { src: 'public/images/shower-doors/showerdoor-46.jpg', cat: 'shower', alt: 'Glass shower door install NJ' },
+  { src: 'public/images/shower-doors/showerdoor-47.jpg', cat: 'shower', alt: 'Frameless shower glass NJ' },
 
   // ── MIRRORS ───────────────────────────────────────────────
   // Add your mirror photos here when ready
 
   // ── GLASS RAILINGS ────────────────────────────────────────
-  { src: 'images/railings/railing-real-1.jpg', cat: 'railing', alt: 'Glass railing installation' },
-  { src: 'images/railings/railing-real-2.jpg', cat: 'railing', alt: 'Deck glass railing' },
-  { src: 'images/railings/railing-real-3.jpg', cat: 'railing', alt: 'Modern glass balustrade' },
+  { src: 'public/images/railings/railing-1.jpg', cat: 'railing', alt: 'Glass railing installation' },
+  { src: 'public/images/railings/railing-2.jpg', cat: 'railing', alt: 'Deck glass railing NJ' },
 
   // ── OFFICE PARTITIONS ─────────────────────────────────────
-  // Add your office photos here when ready
+  { src: 'public/images/office/office-1.jpg', cat: 'office', alt: 'Office glass partition' },
+  { src: 'public/images/office/office-2.jpg', cat: 'office', alt: 'Commercial glass partition' },
+  { src: 'public/images/office/office-3.jpg', cat: 'office', alt: 'Glass office divider' },
+  { src: 'public/images/office/office-4.jpg', cat: 'office', alt: 'Office glass installation' },
 
   // ── EXTERIOR SOLUTIONS ────────────────────────────────────
   // Add your exterior/storefront photos here when ready
