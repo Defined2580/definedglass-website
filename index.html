@@ -63,9 +63,28 @@
     </div>
   </div>
   <!-- Nav -->
-  <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:76px;">
-    <img src="public/logo.png" alt="Defined Glass Creations" style="max-height:64px;width:auto;" onerror="this.style.display='none';this.nextSibling.style.display='block'" />
-    <span style="display:none;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;color:#3d3d3d;">DEFINED <span style="color:#00ADEF;">GLASS CREATIONS</span></span>
+  <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:82px;">
+    <!-- Horizontal logo: hexagon icon left + text right -->
+    <div style="display:flex;align-items:center;gap:14px;cursor:pointer;" onclick="showPage('home')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="66" height="64" style="flex-shrink:0;display:block;">
+        <g transform="translate(-0.12923046,0.85366118)">
+          <g transform="matrix(-1.3721903,0,0,1.3721903,223.34501,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 118.14863,118.60763 23.20983,12.48015 -0.12967,22.01042 -23.08803,14.97045 z"/>
+          <g transform="matrix(1.3721903,0,0,1.3721903,11.222038,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 116.40385,118.60763 -23.209826,12.48015 0.129672,22.01042 23.088024,14.97045 z"/>
+          <path fill="#007a9a" fill-opacity="0.55" d="m 137.07317,139.07991 v -5.50824 l -14.7035,-7.6223 0.15632,34.1074 14.5367,-9.42625 -0.061,-5.09181 -2.36315,0.0113 0.0215,-4.21788 6.64454,-0.0144 -0.0758,11.78046 -15.95661,10.35346 -7.13142,4.61699 0.008,-49.46103 6.89061,3.70908 16.31909,8.77108 -0.0602,7.96409 z"/>
+          <path fill="#007a9a" fill-opacity="0.65" d="m 116.4039,118.60751 -23.209876,12.48027 0.129672,22.01042 23.087924,14.97038 z m -4.31654,7.26928 0.17948,34.31441 -15.110947,-9.8225 v -16.74265 z"/>
+        </g>
+      </svg>
+      <div style="line-height:1.2;">
+        <div style="font-family:Montserrat,sans-serif;font-weight:400;font-size:1.2rem;letter-spacing:.1em;color:#2d2d2d;text-transform:uppercase;">DEFINED</div>
+        <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.1em;color:#00ADEF;text-transform:uppercase;">GLASS CREATIONS</div>
+      </div>
+    </div>
     <!-- Desktop nav -->
     <nav id="desktopNav" style="display:flex;align-items:center;gap:2rem;">
       <span onclick="showPage('home')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">Home</span>
