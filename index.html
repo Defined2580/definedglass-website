@@ -812,7 +812,13 @@
     var grid = document.getElementById('galleryGrid');
     if (!grid || typeof GALLERY_PHOTOS === 'undefined') return;
     grid.innerHTML = '';
-    GALLERY_PHOTOS.forEach(function(photo) {
+    // Sort newest first: highest number in filename = most recently added
+    var sorted = GALLERY_PHOTOS.slice().sort(function(a, b) {
+      var numA = parseInt((a.src.match(/-(\d+)\.jpg$/) || [,0])[1]);
+      var numB = parseInt((b.src.match(/-(\d+)\.jpg$/) || [,0])[1]);
+      return numB - numA;
+    });
+    sorted.forEach(function(photo) {
       var div = document.createElement('div');
       div.className = 'gallery-photo';
       div.dataset.cat = photo.cat;
