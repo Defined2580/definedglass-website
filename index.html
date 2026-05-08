@@ -39,6 +39,11 @@
     .page-section { display:none; }
     .page-section.active { display:block; }
     nav img { max-height:64px; width:auto; }
+    @media (max-width: 768px) {
+      #desktopNav { display:none !important; }
+      #menuBtn { display:flex !important; }
+      .top-bar-right { display:none; }
+    }
     .gallery-item img { transition:transform .5s; }
     .gallery-item:hover img { transform:scale(1.05); }
     .service-card { overflow:hidden; position:relative; }
@@ -54,21 +59,37 @@
   <div style="background:#00ADEF;color:#fff;font-size:.85rem;padding:7px 0;font-weight:500;">
     <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;">
       <span>📞 (732) 708-2580 &nbsp;|&nbsp; ✉ info@definedglass.com</span>
-      <span style="opacity:.8;">Free Estimates · Fast Response</span>
+      <span class="top-bar-right" style="opacity:.8;">Free Estimates · Fast Response</span>
     </div>
   </div>
   <!-- Nav -->
   <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:76px;">
     <img src="public/logo.png" alt="Defined Glass Creations" style="max-height:64px;width:auto;" onerror="this.style.display='none';this.nextSibling.style.display='block'" />
     <span style="display:none;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;color:#3d3d3d;">DEFINED <span style="color:#00ADEF;">GLASS CREATIONS</span></span>
-    <nav style="display:flex;align-items:center;gap:2rem;">
-      <span onclick="showPage('home')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;hover:color:#00ADEF;">Home</span>
+    <!-- Desktop nav -->
+    <nav id="desktopNav" style="display:flex;align-items:center;gap:2rem;">
+      <span onclick="showPage('home')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">Home</span>
       <span onclick="showPage('services')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">Services</span>
       <span onclick="showPage('gallery')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">Gallery</span>
       <span onclick="showPage('about')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">About</span>
       <span onclick="showPage('contact')" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;">Contact</span>
       <span onclick="showPage('quote')" style="background:#00ADEF;color:#fff;padding:8px 18px;border-radius:4px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;">Get A Quote</span>
     </nav>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menuBtn" onclick="toggleMenu()" aria-label="Open menu" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;">
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+    </button>
+  </div>
+  <!-- Mobile menu drawer -->
+  <div id="mobileMenu" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #eee;padding:1rem 2rem 1.5rem;">
+    <span onclick="showPage('home');toggleMenu()" style="padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;">Home</span>
+    <span onclick="showPage('services');toggleMenu()" style="padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;">Services</span>
+    <span onclick="showPage('gallery');toggleMenu()" style="padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;">Gallery</span>
+    <span onclick="showPage('about');toggleMenu()" style="padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;">About</span>
+    <span onclick="showPage('contact');toggleMenu()" style="padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;">Contact</span>
+    <span onclick="showPage('quote');toggleMenu()" style="display:inline-block;margin-top:1rem;background:#00ADEF;color:#fff;padding:12px 24px;border-radius:4px;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;text-align:center;">Get A Quote</span>
   </div>
 </header>
 
@@ -739,6 +760,14 @@
 </footer>
 
 <script>
+  function toggleMenu() {
+    var menu = document.getElementById('mobileMenu');
+    var btn = document.getElementById('menuBtn');
+    var open = menu.style.display === 'flex';
+    menu.style.display = open ? 'none' : 'flex';
+    btn.style.opacity = open ? '1' : '0.7';
+  }
+
   function showPage(name) {
     document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
     document.querySelectorAll('#pageNav a').forEach(a => a.classList.remove('active'));
