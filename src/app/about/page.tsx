@@ -30,7 +30,7 @@ const coreValues = [
   },
   {
     label: 'Problem Solving',
-    desc: 'We solve problems before they become yours. That's the Defined Glass difference.',
+    desc: "We solve problems before they become yours. That's the Defined Glass difference.",
     icon: '◐',
   },
   {
