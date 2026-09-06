@@ -1,0 +1,45 @@
+name: Gallery sync
+
+# Sundays ~2AM America/New_York, from the SharePoint "New Pictures 2026"
+# folder to the live gallery. Runs at both 6:00 and 7:00 UTC so the 2AM ET
+# target holds across daylight-saving changes; the second run is a no-op
+# when nothing changed. Can also be run manually from the Actions tab.
+on:
+  schedule:
+    - cron: '0 6 * * 0'
+    - cron: '0 7 * * 0'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm install --no-save sharp
+      - name: Sync gallery from SharePoint
+        env:
+          MS_TENANT_ID: ${{ secrets.MS_TENANT_ID }}
+          MS_CLIENT_ID: ${{ secrets.MS_CLIENT_ID }}
+          MS_CLIENT_SECRET: ${{ secrets.MS_CLIENT_SECRET }}
+          SHAREPOINT_HOST: ${{ vars.SHAREPOINT_HOST }}
+          SHAREPOINT_SITE_PATH: ${{ vars.SHAREPOINT_SITE_PATH }}
+          ALLOW_DELETE: ${{ vars.ALLOW_DELETE }}
+          DRY_RUN: ${{ vars.DRY_RUN }}
+        run: node scripts/sync-gallery.mjs
+      - name: Commit and push changes
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "No gallery changes"
+          else
+            git commit -m "Gallery sync: $(date -u +%Y-%m-%d)"
+            git push
+          fi

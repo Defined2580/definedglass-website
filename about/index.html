@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>About Us | Defined Glass Creations - Howell, NJ</title>
+  <!-- SEO_BLOCK_START -->
+  <meta name="description" content="Defined Glass Creations is a licensed and insured glass company based in Howell, NJ since 2017, serving homeowners, general contractors and developers across NJ, PA and NY." />
+  <link rel="canonical" href="https://definedglass.com/about/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Defined Glass Creations" />
+  <meta property="og:title" content="About Us | Defined Glass Creations - Howell, NJ" />
+  <meta property="og:description" content="Defined Glass Creations is a licensed and insured glass company based in Howell, NJ since 2017, serving homeowners, general contractors and developers across NJ, PA and NY." />
+  <meta property="og:url" content="https://definedglass.com/about/" />
+  <meta property="og:image" content="https://definedglass.com/public/images/hero/hero-1.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="theme-color" content="#00ADEF" />
+  <link rel="icon" type="image/svg+xml" href="/public/favicon.svg" />
+  <link rel="apple-touch-icon" href="/public/apple-touch-icon.png" />
+  <script>window.INITIAL_PAGE = 'about';</script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "HomeAndConstructionBusiness",
+    "name": "Defined Glass Creations",
+    "url": "https://definedglass.com/",
+    "image": "https://definedglass.com/public/images/hero/hero-1.jpg",
+    "telephone": "+1-732-708-2580",
+    "email": "info@definedglass.com",
+    "foundingDate": "2017-03",
+    "priceRange": "$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "1179 Lakewood Farmingdale Rd",
+      "addressLocality": "Howell",
+      "addressRegion": "NJ",
+      "postalCode": "07731",
+      "addressCountry": "US"
+    },
+    "areaServed": ["New Jersey", "Pennsylvania", "New York"],
+    "sameAs": ["https://www.instagram.com/definedglass/"],
+    "description": "Full-service glass supply and installation: frameless shower doors, custom mirrors, glass railings, office partitions, storefronts and curtain wall systems across NJ, PA and NY."
+  }
+  </script>
+  <!-- SEO_BLOCK_END -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <script src="/gallery-config.js"></script>
+
+<!-- Lightbox overlay -->
+<div id="lightbox" style="display:none;position:fixed;inset:0;z-index:9999;background:rgba(0,0,0,0.93);align-items:center;justify-content:center;" onclick="if(event.target===this)closeLightbox()">
+  <button onclick="closeLightbox()" style="position:absolute;top:18px;right:22px;background:none;border:none;color:#fff;font-size:2rem;cursor:pointer;line-height:1;z-index:10;opacity:.8;">&#x2715;</button>
+  <button id="lightbox-prev" onclick="lightboxNav(-1)">&#8249;</button>
+  <img id="lightbox-img" src="" alt="" style="max-width:90vw;max-height:85vh;object-fit:contain;border-radius:6px;display:block;user-select:none;" />
+  <button id="lightbox-next" onclick="lightboxNav(1)">&#8250;</button>
+  <div id="lightbox-caption" style="position:absolute;bottom:18px;left:0;right:0;text-align:center;color:rgba(255,255,255,.6);font-size:.8rem;pointer-events:none;"></div>
+</div>
+
+<script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            teal: { DEFAULT: '#00ADEF', light: '#B8E4FF', dark: '#0088CC', 50: '#F0F8FF' },
+            brand: { blue: '#00ADEF', dark: '#1a1a2e', charcoal: '#0D0D1A', gray: '#6b7280' }
+          },
+          fontFamily: {
+            heading: ['Montserrat', 'sans-serif'],
+            sans: ['Inter', 'sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    html, body { overflow-x: hidden; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Inter', sans-serif; color: #3d3d3d; }
+    .btn-primary { display:inline-block; background:#00ADEF; color:#fff; padding:12px 28px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:.875rem; border-radius:4px; transition:background .2s; }
+    .btn-primary:hover { background:#0088CC; }
+    .btn-outline { display:inline-block; border:2px solid #fff; color:#fff; padding:12px 28px; font-weight:700; text-transform:uppercase; letter-spacing:.05em; font-size:.875rem; border-radius:4px; transition:all .2s; }
+    .btn-outline:hover { background:#fff; color:#00ADEF; }
+    .section-label { color:#00ADEF; font-size:.75rem; font-weight:700; text-transform:uppercase; letter-spacing:.2em; display:block; margin-bottom:.5rem; }
+    .section-heading { font-family:'Montserrat',sans-serif; font-weight:800; color:#3d3d3d; }
+    .hero-bg { background: linear-gradient(135deg, #050D1A 0%, #0A1628 50%, #0D2040 100%); }
+    .dark-bg { background: linear-gradient(135deg, #050D1A 0%, #0A1628 55%, #0D2040 100%); }
+    .page-nav a { display:inline-block; padding:8px 18px; border-radius:4px; font-size:.8rem; font-weight:600; text-transform:uppercase; letter-spacing:.05em; cursor:pointer; transition:all .2s; color:#00ADEF; border:2px solid #00ADEF; }
+    .page-nav a:hover, .page-nav a.active { background:#00ADEF; color:#fff; }
+    .page-section { display:none; }
+    .page-section.active { display:block; }
+    nav img { max-height:64px; width:auto; }
+    @media (max-width: 768px) {
+      #desktopNav { display:none !important; }
+      #mobileMenu { width:100% !important; box-sizing:border-box !important; left:0 !important; position:relative !important; }
+      #mobileMenu a { display:block !important; width:100% !important; box-sizing:border-box !important; }
+      #menuBtn { display:flex !important; }
+      .top-bar-right { display:none; }
+      #galleryGrid { columns: 2 !important; }
+    }
+    @media (max-width: 480px) {
+      #galleryGrid { columns: 1 !important; }
+    }
+    /* Lightbox */
+    #lightbox { touch-action: pan-y; }
+    #lightbox-prev, #lightbox-next {
+      position:absolute; top:50%; transform:translateY(-50%);
+      background:rgba(255,255,255,.18); border:none; color:#fff;
+      font-size:2rem; cursor:pointer; padding:10px 18px; border-radius:6px;
+      line-height:1; transition:background .2s; z-index:10;
+    }
+    #lightbox-prev:hover, #lightbox-next:hover { background:rgba(255,255,255,.35); }
+    #lightbox-prev { left:14px; }
+    #lightbox-next { right:14px; }
+    .gallery-item img { transition:transform .5s; }
+    .gallery-item:hover img { transform:scale(1.05); }
+    .service-card { overflow:hidden; position:relative; }
+    .service-card:hover { border-color:#00ADEF; box-shadow:0 8px 30px rgba(0,173,239,.12); }
+    .value-card:hover { border-color:#00ADEF; box-shadow:0 4px 16px rgba(0,173,239,.08); }
+  </style>
+</head>
+<body class="antialiased">
+
+<!-- ══ HEADER ══════════════════════════════════════════════════════════════ -->
+<header style="background:#fff;border-bottom:1px solid #f0f0f0;position:sticky;top:0;z-index:50;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+  <!-- Top bar -->
+  <div style="background:#00ADEF;color:#fff;font-size:.85rem;padding:7px 0;font-weight:500;">
+    <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;">
+      <span>📞 (732) 708-2580 &nbsp;|&nbsp; ✉ info@definedglass.com</span>
+      <span class="top-bar-right" style="opacity:.8;">Licensed &amp; Insured · Free Estimates · Fast Response</span>
+    </div>
+  </div>
+  <!-- Nav -->
+  <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;align-items:center;justify-content:space-between;height:82px;">
+    <!-- Horizontal logo: hexagon icon left + text right -->
+    <div style="display:flex;align-items:center;gap:14px;cursor:pointer;" onclick="showPage('home')">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="66" height="64" style="flex-shrink:0;display:block;">
+        <g transform="translate(-0.12923046,0.85366118)">
+          <g transform="matrix(-1.3721903,0,0,1.3721903,223.34501,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 118.14863,118.60763 23.20983,12.48015 -0.12967,22.01042 -23.08803,14.97045 z"/>
+          <g transform="matrix(1.3721903,0,0,1.3721903,11.222038,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 116.40385,118.60763 -23.209826,12.48015 0.129672,22.01042 23.088024,14.97045 z"/>
+          <path fill="#007a9a" fill-opacity="0.55" d="m 137.07317,139.07991 v -5.50824 l -14.7035,-7.6223 0.15632,34.1074 14.5367,-9.42625 -0.061,-5.09181 -2.36315,0.0113 0.0215,-4.21788 6.64454,-0.0144 -0.0758,11.78046 -15.95661,10.35346 -7.13142,4.61699 0.008,-49.46103 6.89061,3.70908 16.31909,8.77108 -0.0602,7.96409 z"/>
+          <path fill="#007a9a" fill-opacity="0.65" d="m 116.4039,118.60751 -23.209876,12.48027 0.129672,22.01042 23.087924,14.97038 z m -4.31654,7.26928 0.17948,34.31441 -15.110947,-9.8225 v -16.74265 z"/>
+        </g>
+      </svg>
+      <div style="line-height:1.2;">
+        <div style="font-family:Montserrat,sans-serif;font-weight:400;font-size:1.2rem;letter-spacing:.1em;color:#2d2d2d;text-transform:uppercase;">DEFINED</div>
+        <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.6rem;letter-spacing:.1em;color:#00ADEF;text-transform:uppercase;">GLASS CREATIONS</div>
+      </div>
+    </div>
+    <!-- Desktop nav -->
+    <nav id="desktopNav" style="display:flex;align-items:center;gap:2rem;">
+      <a href="/" data-page="home" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;text-decoration:none;">Home</a>
+      <a href="/services/" data-page="services" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;text-decoration:none;">Services</a>
+      <a href="/gallery/" data-page="gallery" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;text-decoration:none;">Gallery</a>
+      <a href="/about/" data-page="about" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;text-decoration:none;">About</a>
+      <a href="/contact/" data-page="contact" style="font-size:.8rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;text-decoration:none;">Contact</a>
+      <a href="/quote/" data-page="quote" style="background:#00ADEF;color:#fff;padding:8px 18px;border-radius:4px;font-size:.8rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;text-decoration:none;">Get A Quote</a>
+    </nav>
+    <!-- Hamburger button (mobile only) -->
+    <button id="menuBtn" onclick="toggleMenu()" aria-label="Open menu" style="display:none;flex-direction:column;gap:5px;background:none;border:none;cursor:pointer;padding:8px;">
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+      <span style="display:block;width:24px;height:2px;background:#3d3d3d;border-radius:2px;transition:all .3s;"></span>
+    </button>
+  </div>
+  <!-- Mobile menu drawer -->
+  <div id="mobileMenu" style="display:none;flex-direction:column;background:#fff;border-top:1px solid #eee;padding:1rem 2rem 1.5rem;width:100%;box-sizing:border-box;position:relative;left:0;">
+    <a href="/" data-page="home" style="display:block;padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;">Home</a>
+    <a href="/services/" data-page="services" style="display:block;padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;">Services</a>
+    <a href="/gallery/" data-page="gallery" style="display:block;padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;">Gallery</a>
+    <a href="/about/" data-page="about" style="display:block;padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;">About</a>
+    <a href="/contact/" data-page="contact" style="display:block;padding:12px 0;font-size:.85rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em;color:#3d3d3d;cursor:pointer;border-bottom:1px solid #f5f5f5;text-decoration:none;">Contact</a>
+    <a href="/quote/" data-page="quote" style="display:block;margin-top:1rem;background:#00ADEF;color:#fff;padding:12px 24px;border-radius:4px;font-size:.85rem;font-weight:700;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;text-align:center;text-decoration:none;">Get A Quote</a>
+  </div>
+</header>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  HOME PAGE                                                             -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-home" data-title="Defined Glass Creations | Custom Glass &amp; Mirror | NJ, PA, NY" class="page-section active">
+
+  <!-- Hero -->
+  <section style="height:100vh;min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden;" id="hero-section">
+    <!-- Slide backgrounds -->
+    <div id="hero-slide-0" style="position:absolute;inset:0;z-index:0;transition:opacity 1.2s ease;">
+      <img src="/public/images/hero/hero-1.jpg" alt="Custom glass partition wall" fetchpriority="high" style="width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#050D1A,#0D2040)'" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(4,10,20,0.78) 0%, rgba(4,10,20,0.52) 38%, rgba(4,10,20,0.08) 100%);"></div>
+    </div>
+    <div id="hero-slide-1" style="position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="/public/images/hero/hero-2.jpg" alt="Custom glass railing" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#050D1A,#0D2040)'" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(4,10,20,0.78) 0%, rgba(4,10,20,0.52) 38%, rgba(4,10,20,0.08) 100%);"></div>
+    </div>
+    <div id="hero-slide-2" style="position:absolute;inset:0;z-index:0;opacity:0;transition:opacity 1.2s ease;">
+      <img src="/public/images/hero/hero-3.jpg" alt="Commercial glass storefront by Defined Glass" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#050D1A,#0D2040)'" />
+      <div style="position:absolute;inset:0;background:linear-gradient(to right, rgba(4,10,20,0.78) 0%, rgba(4,10,20,0.52) 38%, rgba(4,10,20,0.08) 100%);"></div>
+    </div>
+    <!-- Content -->
+    <div style="position:relative;z-index:1;max-width:1280px;margin:0 auto;padding:0 2.5rem;width:100%;box-sizing:border-box;">
+      <div style="max-width:640px;display:flex;gap:1.6rem;align-items:flex-start;">
+        <div style="width:5px;min-height:180px;background:#00ADEF;margin-top:.35rem;flex-shrink:0;border-radius:3px;"></div>
+        <div>
+          <h1 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(3.2rem,7.5vw,6rem);line-height:1.0;margin-bottom:1.4rem;color:#fff;letter-spacing:-.02em;text-transform:uppercase;">
+            Defined<br/>By Quality.<br/><span style="color:#00ADEF;">Built to Last.</span>
+          </h1>
+          <p style="color:rgba(255,255,255,.8);font-size:1rem;line-height:1.8;margin-bottom:2.2rem;max-width:420px;">
+            Premium glass solutions for residential and commercial spaces — craftsmanship you can see through.
+          </p>
+          <div style="display:flex;gap:.9rem;flex-wrap:wrap;">
+            <span class="btn-primary" onclick="showPage('services')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">View Our Services</span>
+            <span class="btn-outline" onclick="showPage('quote')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">Get A Free Quote</span>
+          </div>
+          <p style="color:rgba(255,255,255,.65);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-top:1.75rem;">Licensed &amp; Insured &nbsp;·&nbsp; Since 2017 &nbsp;·&nbsp; NJ · PA · NY</p>
+        </div>
+      </div>
+    </div>
+    <!-- Slide dots -->
+    <div style="position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);display:flex;gap:10px;z-index:2;" id="hero-dots">
+      <div class="hero-dot" onclick="heroGoTo(0)" style="width:10px;height:10px;border-radius:50%;background:#00ADEF;cursor:pointer;transition:background .3s;"></div>
+      <div class="hero-dot" onclick="heroGoTo(1)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .3s;"></div>
+      <div class="hero-dot" onclick="heroGoTo(2)" style="width:10px;height:10px;border-radius:50%;background:rgba(255,255,255,.4);cursor:pointer;transition:background .3s;"></div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section style="padding:6rem 2rem;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="margin-bottom:3.5rem;">
+        <div style="display:flex;align-items:center;gap:1rem;margin-bottom:.6rem;">
+          <div style="width:44px;height:3px;background:#00ADEF;border-radius:2px;"></div>
+          <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(1.6rem,3.5vw,2.4rem);letter-spacing:.04em;margin:0;">OUR <span style="color:#00ADEF;">SERVICES</span></h2>
+        </div>
+        <p style="color:#6b7280;font-size:1rem;max-width:520px;margin:0;">From a single custom mirror to a full commercial glazing package — we deliver quality at every scale.</p>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:2rem;">
+        <!-- Cards -->
+        <div class="service-card" style="border:1px solid #e8e8e8;border-radius:12px;padding:0;transition:all .3s;">
+          <div style="height:180px;overflow:hidden;border-radius:12px 12px 0 0;">
+            <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-1.jpg" alt="Frameless Shower" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0A1628,#0D2040)'" />
+          </div>
+          <div style="padding:1.4rem 1.5rem 1.6rem;">
+            <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem;">Frameless Shower Doors</h3>
+            <p style="color:#6b7280;font-size:.83rem;line-height:1.7;">Custom frameless and semi-frameless shower enclosures crafted to fit your bathroom perfectly.</p>
+          </div>
+        </div>
+        <div class="service-card" style="border:1px solid #e8e8e8;border-radius:12px;padding:0;transition:all .3s;">
+          <div style="height:180px;overflow:hidden;border-radius:12px 12px 0 0;">
+            <img loading="lazy" decoding="async" src="/public/images/mirrors/mirror-1.jpg" alt="Custom Mirror" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0A1628,#0D2040)'" />
+          </div>
+          <div style="padding:1.4rem 1.5rem 1.6rem;">
+            <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem;">Custom Mirrors</h3>
+            <p style="color:#6b7280;font-size:.83rem;line-height:1.7;">Beveled, frameless, and decorative mirrors for bathrooms, gyms, salons, and retail spaces.</p>
+          </div>
+        </div>
+        <div class="service-card" style="border:1px solid #e8e8e8;border-radius:12px;padding:0;transition:all .3s;">
+          <div style="height:180px;overflow:hidden;border-radius:12px 12px 0 0;">
+            <img loading="lazy" decoding="async" src="/public/images/railings/railing-1.jpg" alt="Glass Railing" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0A1628,#0D2040)'" />
+          </div>
+          <div style="padding:1.4rem 1.5rem 1.6rem;">
+            <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem;">Glass Railings</h3>
+            <p style="color:#6b7280;font-size:.83rem;line-height:1.7;">Sleek frameless and post-mounted glass railings for decks, stairs, balconies, and interiors.</p>
+          </div>
+        </div>
+        <div class="service-card" style="border:1px solid #e8e8e8;border-radius:12px;padding:0;transition:all .3s;">
+          <div style="height:180px;overflow:hidden;border-radius:12px 12px 0 0;">
+            <img loading="lazy" decoding="async" src="/public/images/office/office-1.jpg" alt="Office Partitions" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0A1628,#0D2040)'" />
+          </div>
+          <div style="padding:1.4rem 1.5rem 1.6rem;">
+            <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem;">Office Partitions</h3>
+            <p style="color:#6b7280;font-size:.83rem;line-height:1.7;">Modern glass walls and partitions that create bright, open, collaborative work environments.</p>
+          </div>
+        </div>
+        <div class="service-card" style="border:1px solid #e8e8e8;border-radius:12px;padding:0;transition:all .3s;">
+          <div style="height:180px;overflow:hidden;border-radius:12px 12px 0 0;">
+            <img src="/public/images/exterior/exterior-5.jpg" alt="Commercial glass storefront entrance" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;display:block;" onerror="this.parentElement.style.background='linear-gradient(135deg,#0A1628,#0D2040)'" />
+          </div>
+          <div style="padding:1.4rem 1.5rem 1.6rem;">
+            <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1rem;margin-bottom:.5rem;">Storefronts &amp; Exterior Solutions</h3>
+            <p style="color:#6b7280;font-size:.83rem;line-height:1.7;">High-performance glass storefronts, entrances, and curtain wall systems engineered for durability and curb appeal.</p>
+          </div>
+        </div>
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <span class="btn-primary" onclick="showPage('services')" style="cursor:pointer;">See All Services</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bold Photo Break -->
+  <section style="position:relative;height:520px;overflow:hidden;display:flex;align-items:center;justify-content:center;">
+    <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-15.jpg" alt="Glass installation" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg,#050D1A,#0D2040)'" />
+    <div style="position:absolute;inset:0;background:linear-gradient(135deg,rgba(5,13,26,0.82) 0%,rgba(0,100,150,0.55) 60%,rgba(0,173,239,0.25) 100%);"></div>
+    <div style="position:relative;z-index:1;text-align:center;padding:2rem;max-width:800px;">
+      <p style="color:#00ADEF;font-size:.72rem;font-weight:700;text-transform:uppercase;letter-spacing:.35em;margin-bottom:1.25rem;">Residential &amp; Commercial</p>
+      <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.4rem,5.5vw,4.2rem);color:#fff;line-height:1.05;margin-bottom:1.75rem;letter-spacing:-.01em;">Glass That<br/>Makes a Statement.</h2>
+      <p style="color:rgba(255,255,255,.78);font-size:1rem;line-height:1.7;max-width:520px;margin:0 auto 2.25rem;">Whether it's a frameless shower, a deck railing, or a full commercial storefront — we fabricate and install every piece to exacting standards.</p>
+      <span class="btn-primary" onclick="showPage('gallery')" style="cursor:pointer;font-size:.95rem;padding:14px 32px;">See Our Work</span>
+    </div>
+  </section>
+
+  <!-- Why Us -->
+  <section style="padding:6rem 2rem;background:#F0F8FF;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <span class="section-label">Why Defined Glass</span>
+        <h2 class="section-heading" style="font-size:clamp(1.8rem,3.5vw,2.75rem);margin-bottom:1.5rem;">We're All In — From the First Call to the Final Install</h2>
+        <p style="color:#6b7280;font-size:1rem;line-height:1.8;margin-bottom:2rem;">At Defined Glass, we don't just install glass — we deliver an experience built on transparency, communication, and craftsmanship that speaks for itself. We take ownership of every project, solve problems before they become yours, and show up with the efficiency and professionalism you deserve.</p>
+        <div style="display:flex;gap:1rem;flex-wrap:wrap;">
+          <span class="btn-primary" onclick="showPage('about')" style="cursor:pointer;">About Us</span>
+          <span style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;text-transform:uppercase;font-size:.875rem;border-radius:4px;cursor:pointer;" onclick="showPage('gallery')">View Our Work</span>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+        <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Craftsmanship</h3>
+          <p style="font-size:.8rem;color:#6b7280;line-height:1.6;">Every cut, every install is executed with precision and pride.</p>
+        </div>
+        <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Transparency</h3>
+          <p style="font-size:.8rem;color:#6b7280;line-height:1.6;">No surprises. You know what to expect from estimate to final install.</p>
+        </div>
+        <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Ownership</h3>
+          <p style="font-size:.8rem;color:#6b7280;line-height:1.6;">We take full responsibility for every project, start to finish.</p>
+        </div>
+        <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Communication</h3>
+          <p style="font-size:.8rem;color:#6b7280;line-height:1.6;">We keep you in the loop so you're never left guessing.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Dual Slideshow -->
+  <section style="padding:5rem 2rem;background:#070F1E;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">At A Glance</span>
+        <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-top:.25rem;">Our Work — Residential &amp; Commercial</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+
+        <!-- Residential Slider -->
+        <div>
+          <p style="color:#00ADEF;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.22em;margin-bottom:1rem;">Residential</p>
+          <div style="position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#0A1628;" id="res-slides">
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:1;z-index:1;">
+              <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-1.jpg" alt="Frameless shower" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Frameless Shower Enclosure</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-2.jpg" alt="Custom shower door" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Shower with Return Panel</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-3.jpg" alt="Frameless shower panel" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Neo Angle Enclosure</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-4.jpg" alt="Hinged glass shower door" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Frameless Shower Doors</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/shower-doors/showerdoor-5.jpg" alt="Glass shower enclosure" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Tub Enclosure</span></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:14px;" id="res-dots">
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:1;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+          </div>
+        </div>
+
+        <!-- Commercial Slider -->
+        <div>
+          <p style="color:#00ADEF;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.22em;margin-bottom:1rem;">Commercial</p>
+          <div style="position:relative;aspect-ratio:4/3;border-radius:10px;overflow:hidden;background:#0A1628;" id="com-slides">
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:1;z-index:1;">
+              <img loading="lazy" decoding="async" src="/public/images/office/office-1.jpg" alt="Office glass partition" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Office Glass Walls</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/office/office-2.jpg" alt="Commercial glass partition" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Glass Office Entrances</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/office/office-3.jpg" alt="Glass office divider" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Frameless Office Partitions</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img loading="lazy" decoding="async" src="/public/images/office/office-4.jpg" alt="Office glass installation" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Glass Wall Systems</span></div>
+            </div>
+            <div class="slide" style="position:absolute;inset:0;transition:opacity .9s ease;opacity:0;z-index:0;">
+              <img src="/public/images/exterior/exterior-4.jpg" alt="Commercial glass entry doors" loading="lazy" decoding="async" style="width:100%;height:100%;object-fit:cover;" onerror="this.parentElement.style.background='#0A1628';this.style.display='none'" />
+              <div style="position:absolute;bottom:0;left:0;right:0;padding:1.1rem 1.3rem;background:linear-gradient(to top,rgba(0,0,0,.72),transparent);"><span style="color:#fff;font-weight:600;font-size:.85rem;">Commercial Entry Systems</span></div>
+            </div>
+          </div>
+          <div style="display:flex;justify-content:center;gap:8px;margin-top:14px;" id="com-dots">
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:1;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+            <div class="dot" style="width:8px;height:8px;border-radius:2px;background:#00ADEF;cursor:pointer;transition:opacity .3s;opacity:.35;"></div>
+          </div>
+        </div>
+
+      </div>
+      <div style="text-align:center;margin-top:3rem;">
+        <span class="btn-primary" onclick="showPage('gallery')" style="cursor:pointer;">View Full Gallery</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission Quote -->
+  <section class="dark-bg" style="padding:6rem 2rem;">
+    <div style="max-width:800px;margin:0 auto;text-align:center;">
+      <div style="font-size:2.5rem;color:#00ADEF;opacity:.6;margin-bottom:2rem;">"</div>
+      <p style="color:#fff;font-family:Montserrat,sans-serif;font-size:clamp(1.1rem,2.5vw,1.6rem);font-weight:300;line-height:1.7;font-style:italic;">
+        "We don't just install glass — we deliver an experience built on transparency, communication, and craftsmanship that speaks for itself. When you work with us, you're working with a team that's all in — from the first call to the final install."
+      </p>
+      <p style="color:#B8E4FF;margin-top:2rem;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">— The Defined Glass Team</p>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="padding:5rem 2rem;background:#00ADEF;">
+    <div style="max-width:800px;margin:0 auto;text-align:center;color:#fff;">
+      <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);margin-bottom:1rem;">Ready to Start Your Project?</h2>
+      <p style="color:rgba(255,255,255,.85);font-size:1.05rem;margin-bottom:2.5rem;max-width:520px;margin-left:auto;margin-right:auto;">Get in touch today for a free, no-obligation quote. We serve homeowners, builders, and developers across NJ, PA, and NY.</p>
+      <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+        <span style="background:#fff;color:#00ADEF;padding:14px 32px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('quote')">Get A Free Quote</span>
+        <a href="tel:7327082580" style="border:2px solid #fff;color:#fff;padding:14px 32px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;">Call (732) 708-2580</a>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  SERVICES PAGE                                                         -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-services" data-title="Glass Services | Shower Doors, Mirrors, Railings, Storefronts | Defined Glass" class="page-section">
+  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+    <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">What We Offer</p>
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">Our Services</h2>
+    <p style="color:#d1d5db;font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7;">From custom residential glass to large-scale commercial glazing systems — we bring craftsmanship and precision to every project across NJ, PA, and NY.</p>
+  </section>
+  <!-- Residential -->
+  <section style="padding:5rem 2rem;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:3rem;">
+        <div style="width:48px;height:4px;background:#00ADEF;border-radius:2px;"></div>
+        <div>
+          <h2 class="section-heading" style="font-size:2rem;">Residential Glass</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+        <div class="service-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:2rem;transition:all .3s;">
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.75rem;">Frameless Shower Doors &amp; Enclosures</h3>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1rem;">Custom frameless or semi-frameless shower enclosures. We fabricate and install to exact measurements — no standard sizes here.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Frameless &amp; semi-frameless</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Walk-in showers &amp; tub enclosures</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Hinged, sliding &amp; pivot doors</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Custom hardware finishes</li>
+          </ul>
+        </div>
+        <div class="service-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:2rem;transition:all .3s;">
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.75rem;">Custom Mirrors</h3>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1rem;">A well-placed mirror changes a room. We cut, bevel, and install custom mirrors for bathrooms, vanities, gyms, salons, and retail spaces.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Beveled &amp; flat edge options</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Custom shapes &amp; sizes</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Antique &amp; tinted glass</li>
+          </ul>
+        </div>
+        <div class="service-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:2rem;transition:all .3s;">
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.75rem;">Glass Railings &amp; Balustrades</h3>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1rem;">Add an open, modern feel with frameless or post-mounted glass railings for decks, stairs, balconies, and interior loft edges.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Frameless &amp; post-mount systems</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Interior &amp; exterior applications</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Deck, stair &amp; balcony railings</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00ADEF;">✓</span> Tempered &amp; laminated glass</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Commercial -->
+  <section style="padding:5rem 2rem;background:#F0F8FF;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="display:flex;align-items:center;gap:1rem;margin-bottom:3rem;">
+        <div style="width:48px;height:4px;background:#00adef;border-radius:2px;"></div>
+        <div>
+          <h2 class="section-heading" style="font-size:2rem;">Commercial Glazing</h2>
+        </div>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:1.5rem;">
+        <div class="service-card" style="border:1px solid #e5e7eb;border-radius:12px;padding:2rem;transition:all .3s;background:#fff;">
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.75rem;">Office Partitions &amp; Glass Walls</h3>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1rem;">Full-height Herculite glass partition systems that maximize natural light while maintaining acoustic separation — bringing clarity and openness that transforms any workspace.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> Full-height &amp; partial-height systems</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> Herculite frameless glass partitions</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> Clarity &amp; openness that transforms any workspace</li>
+          </ul>
+        </div>
+        <div class="service-card" style="border:1px solid #e5e7eb;border-radius:12px;padding:2rem;transition:all .3s;background:#fff;">
+          <h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.05rem;margin-bottom:.75rem;">Storefronts &amp; Exterior Solutions</h3>
+          <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1rem;">From aluminum-framed storefront entrances to full curtain wall systems — we handle the complete exterior glass package for commercial and mixed-use projects.</p>
+          <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.4rem;">
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> Aluminum storefront framing</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> ADA-compliant entry options</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> Curtain wall systems</li>
+            <li style="font-size:.8rem;color:#3d3d3d;display:flex;align-items:center;gap:.5rem;"><span style="color:#00adef;">✓</span> GC &amp; architect coordination</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- CTA -->
+  <section style="padding:4rem 2rem;background:#00ADEF;text-align:center;color:#fff;">
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;margin-bottom:1rem;">Have a Project in Mind?</h2>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:2rem;">Use our Smart Glazier configurator to get a quick quote, or reach out directly.</p>
+    <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+      <span style="background:#fff;color:#00ADEF;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('quote')">Get A Free Quote</span>
+      <span style="border:2px solid #fff;color:#fff;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('contact')">Contact Us</span>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  GALLERY PAGE                                                          -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-gallery" data-title="Project Gallery | Defined Glass Creations" class="page-section">
+  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+    <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">Our Work</p>
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">Project Gallery</h2>
+    <p style="color:#d1d5db;font-size:1rem;max-width:540px;margin:0 auto;">Browse completed projects across residential and commercial categories.</p>
+  </section>
+  <!-- Filter tabs -->
+  <div style="background:#fff;border-bottom:1px solid #f0f0f0;padding:.75rem 2rem;display:flex;gap:.5rem;overflow-x:auto;" id="galleryFilters">
+    <button onclick="filterGallery('All',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#00ADEF;color:#fff;font-size:.8rem;font-weight:600;cursor:pointer;">All</button>
+    <button onclick="filterGallery('shower',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#f5f5f5;color:#6b7280;font-size:.8rem;font-weight:600;cursor:pointer;">Shower Doors</button>
+    <button onclick="filterGallery('mirror',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#f5f5f5;color:#6b7280;font-size:.8rem;font-weight:600;cursor:pointer;">Mirrors</button>
+    <button onclick="filterGallery('railing',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#f5f5f5;color:#6b7280;font-size:.8rem;font-weight:600;cursor:pointer;">Glass Railings</button>
+    <button onclick="filterGallery('office',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#f5f5f5;color:#6b7280;font-size:.8rem;font-weight:600;cursor:pointer;">Office Partitions</button>
+    <button onclick="filterGallery('exterior',this)" style="padding:7px 18px;border-radius:4px;border:none;background:#f5f5f5;color:#6b7280;font-size:.8rem;font-weight:600;cursor:pointer;">Exterior Solutions</button>
+  </div>
+  <section style="padding:3rem 2rem;background:#f8f8f8;min-height:60vh;">
+    <div style="max-width:1280px;margin:0 auto;columns:3;column-gap:1rem;" id="galleryGrid">
+      <!-- Built dynamically from gallery-config.js -->
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  ABOUT PAGE                                                            -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-about" data-title="About Us | Defined Glass Creations - Howell, NJ" class="page-section">
+  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+    <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">Our Story</p>
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">About Us</h2>
+    <p style="color:#d1d5db;font-size:1rem;max-width:580px;margin:0 auto;">A team built on craftsmanship, driven by values, and committed to delivering glass solutions that speak for themselves.</p>
+  </section>
+  <!-- Mission -->
+  <section style="padding:5rem 2rem;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+      <div>
+        <span class="section-label">Who We Are</span>
+        <h2 class="section-heading" style="font-size:2rem;margin-bottom:1.5rem;">Defined Glass Creations</h2>
+        <div style="color:#6b7280;font-size:.95rem;line-height:1.8;display:flex;flex-direction:column;gap:1rem;">
+          <p>Defined Glass Creations is a full-service glass supply and installation company based in Howell, NJ. We serve residential homeowners, general contractors, and commercial developers across New Jersey, Pennsylvania, and parts of New York.</p>
+          <p>Whether you're updating a bathroom with a frameless shower door or managing a multi-story curtain wall installation, we bring the same level of precision, professionalism, and pride to every project.</p>
+          <p>Our showroom in Howell is open to homeowners and trade professionals alike. Stop in to see glass samples, hardware finishes, and get a sense of what's possible for your space.</p>
+        </div>
+      </div>
+      <div class="dark-bg" style="border-radius:16px;padding:2.5rem;color:#fff;position:relative;overflow:hidden;">
+        <div style="position:absolute;top:0;right:0;width:200px;height:200px;background:#00ADEF;opacity:.1;border-radius:50%;filter:blur(40px);"></div>
+        <div style="font-size:2.5rem;color:#00ADEF;opacity:.7;margin-bottom:1.5rem;">"</div>
+        <h3 style="font-family:Montserrat,sans-serif;font-weight:700;color:#B8E4FF;margin-bottom:1rem;">Our Mission</h3>
+        <p style="color:#d1d5db;line-height:1.8;font-style:italic;font-size:.95rem;">"At Defined Glass, we don't just install glass — we deliver an experience built on transparency, communication, and craftsmanship that speaks for itself. We take ownership of every project, solve problems before they become yours, and show up with the efficiency and professionalism you deserve. When you work with us, you're working with a team that's all in — from the first call to the final install."</p>
+        <p style="color:#B8E4FF;margin-top:2rem;font-size:.75rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase;">— The Defined Glass Team</p>
+      </div>
+    </div>
+  </section>
+  <!-- Stats -->
+  <section style="padding:4rem 2rem;background:#F0F8FF;">
+    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+      <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">NJ·PA·NY</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Service Area</p></div>
+      <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">100%</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Custom Fabrication</p></div>
+      <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">6</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Core Service Lines</p></div>
+      <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">5★</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Client Satisfaction</p></div>
+    </div>
+  </section>
+  <!-- Values -->
+  <section style="padding:5rem 2rem;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;">
+      <div style="text-align:center;margin-bottom:3rem;">
+        <span class="section-label">What Drives Us</span>
+        <h2 class="section-heading" style="font-size:2rem;">Our Core Values</h2>
+      </div>
+      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">01</span><strong style="font-family:Montserrat,sans-serif;">Transparency &amp; Communication</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">No hidden costs, no surprises. We keep the lines open so you always know exactly where your project stands.</p>
+        </div>
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">02</span><strong style="font-family:Montserrat,sans-serif;">Ownership</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Every project is ours to own — we take full responsibility from the first measurement to the final install.</p>
+        </div>
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">03</span><strong style="font-family:Montserrat,sans-serif;">Craftsmanship</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Every cut, every install is executed with precision and pride. We don't cut corners — we cut glass.</p>
+        </div>
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">04</span><strong style="font-family:Montserrat,sans-serif;">Positivity</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Good energy on every job site. We make the process as smooth as the glass we install.</p>
+        </div>
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">05</span><strong style="font-family:Montserrat,sans-serif;">Service</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Every client gets our best — homeowner or commercial developer. The same care, the same standard, every time.</p>
+        </div>
+        <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
+          <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">06</span><strong style="font-family:Montserrat,sans-serif;">Efficiency</strong></div>
+          <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">We show up on time, work clean, and finish on schedule — because your time matters as much as ours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  CONTACT PAGE                                                          -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-contact" data-title="Contact Defined Glass Creations | Howell, NJ Showroom" class="page-section">
+  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+    <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">Get In Touch</p>
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">Contact Us</h2>
+    <p style="color:#d1d5db;font-size:1rem;">Have a question or ready to start your project? We'd love to hear from you.</p>
+  </section>
+  <section style="padding:5rem 2rem;background:#fff;">
+    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:4rem;">
+      <!-- Info -->
+      <div style="display:flex;flex-direction:column;gap:2rem;">
+        <div>
+          <span class="section-label">Showroom</span>
+          <h2 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:.75rem;">Come See Us in Person</h2>
+          <p style="color:#6b7280;font-size:.875rem;line-height:1.7;">We have a fully stocked showroom where you can see glass samples, hardware finishes, and discuss your project.</p>
+        </div>
+        <div style="display:flex;flex-direction:column;gap:1.5rem;">
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:#F0F8FF;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📍</div>
+            <div><strong style="display:block;margin-bottom:.25rem;font-size:.9rem;">Showroom</strong><a href="https://maps.google.com/?q=1179+Lakewood+Farmingdale+Rd+Howell+NJ" target="_blank" style="color:#6b7280;font-size:.85rem;line-height:1.6;text-decoration:none;">1179 Lakewood Farmingdale Rd<br/>Howell, NJ 07731</a></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:#F0F8FF;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📞</div>
+            <div><strong style="display:block;margin-bottom:.25rem;font-size:.9rem;">Phone</strong><a href="tel:7327082580" style="color:#6b7280;font-size:.85rem;text-decoration:none;">(732) 708-2580</a></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:#F0F8FF;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">✉</div>
+            <div><strong style="display:block;margin-bottom:.25rem;font-size:.9rem;">Email</strong><a href="mailto:info@definedglass.com" style="color:#6b7280;font-size:.85rem;text-decoration:none;">info@definedglass.com</a></div>
+          </div>
+          <div style="display:flex;gap:1rem;align-items:flex-start;">
+            <div style="width:40px;height:40px;background:#F0F8FF;border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.1rem;flex-shrink:0;">📷</div>
+            <div><strong style="display:block;margin-bottom:.25rem;font-size:.9rem;">Instagram</strong><a href="https://www.instagram.com/definedglass/" target="_blank" style="color:#6b7280;font-size:.85rem;text-decoration:none;">@definedglass</a></div>
+          </div>
+        </div>
+        <div style="background:#F0F8FF;border:1px solid rgba(0,173,239,.2);border-radius:12px;padding:1.25rem;">
+          <span style="color:#00ADEF;font-size:.7rem;font-weight:700;text-transform:uppercase;letter-spacing:.15em;display:block;margin-bottom:.25rem;">Service Area</span>
+          <p style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.1rem;color:#3d3d3d;">NJ · PA · NY</p>
+        </div>
+      </div>
+      <!-- Form -->
+      <div style="background:#f8f8f8;border-radius:16px;padding:2.5rem;border:1px solid #f0f0f0;">
+        <h2 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:.5rem;">Send Us a Message</h2>
+        <p style="color:#6b7280;font-size:.85rem;margin-bottom:2rem;">For a detailed project quote, use our <span style="color:#00ADEF;cursor:pointer;" onclick="showPage('quote')">Get A Quote tool →</span></p>
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
+          <div><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Full Name *</label><input type="text" placeholder="John Smith" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
+          <div><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Phone</label><input type="tel" placeholder="(732) 555-0000" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
+        </div>
+        <div style="margin-bottom:1rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Email *</label><input type="email" placeholder="you@example.com" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
+        <div style="margin-bottom:1rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Service</label><select style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;background:#fff;box-sizing:border-box;"><option>Select a service...</option><option>Frameless Shower Doors</option><option>Custom Mirrors</option><option>Glass Railings</option><option>Office Partitions</option><option>Storefront</option><option>Curtain Wall System</option></select></div>
+        <div style="margin-bottom:1.5rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Message *</label><textarea rows="4" placeholder="Tell us about your project..." style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;resize:none;box-sizing:border-box;"></textarea></div>
+        <button style="width:100%;background:#00ADEF;color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700;font-size:.875rem;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;">Send Message</button>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<!--  QUOTE PAGE                                                            -->
+<!-- ══════════════════════════════════════════════════════════════════════ -->
+<div id="page-quote" data-title="Get A Free Quote | Defined Glass Creations" class="page-section">
+  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+    <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">Start Your Project</p>
+    <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">Get A Quote</h2>
+    <p style="color:#d1d5db;font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7;">Tell us about your project and we'll get back to you with a clear, no-obligation quote — usually within 24 hours.</p>
+  </section>
+  <section style="padding:3rem 2rem;background:#f8f8f8;">
+    <div style="max-width:900px;margin:0 auto;">
+      <!-- Trust badges -->
+      <div style="display:flex;justify-content:center;gap:3rem;margin-bottom:2rem;flex-wrap:wrap;">
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Free Quote</span>
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> No Obligation</span>
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Fast Response</span>
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Licensed &amp; Insured</span>
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Since 2017</span>
+        <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> NJ · PA · NY</span>
+      </div>
+      <!-- iframe embed -->
+      <div style="background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid #f0f0f0;overflow:hidden;padding:1rem;">
+        <iframe src="https://webusd.smartglazier.com/DEF/LiteApp/?xti=31/ #/" width="100%" style="border:none;min-height:600px;display:block;" title="Defined Glass Quote Tool"></iframe>
+      </div>
+      <!-- Fallback -->
+      <div style="text-align:center;margin-top:2.5rem;">
+        <p style="color:#6b7280;font-size:.875rem;margin-bottom:1rem;">Prefer to speak with someone?</p>
+        <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
+          <a href="tel:7327082580" class="btn-primary">Call (732) 708-2580</a>
+          <span style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;font-size:.875rem;text-transform:uppercase;border-radius:4px;cursor:pointer;" onclick="showPage('contact')">Send a Message</span>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- Process -->
+  <section style="padding:5rem 2rem;background:#fff;text-align:center;">
+    <span class="section-label">The Process</span>
+    <h2 class="section-heading" style="font-size:2rem;margin-bottom:3rem;">What Happens Next</h2>
+    <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
+      <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">01</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Submit Your Info</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Fill out the configurator above with your project details.</p></div>
+      <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">02</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">We Review &amp; Follow Up</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Our team reviews your submission and reaches out to confirm details.</p></div>
+      <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">03</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Get Your Quote</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">A clear, itemized quote — no surprises, no fine print.</p></div>
+    </div>
+  </section>
+</div>
+
+<!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
+<footer style="background:#0A0F1E;color:#9ca3af;padding:4rem 2rem 2rem;">
+  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="46" height="45" style="flex-shrink:0;display:block;">
+        <g transform="translate(-0.12923046,0.85366118)">
+          <g transform="matrix(-1.3721903,0,0,1.3721903,223.34501,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 118.14863,118.60763 23.20983,12.48015 -0.12967,22.01042 -23.08803,14.97045 z"/>
+          <g transform="matrix(1.3721903,0,0,1.3721903,11.222038,25.741902)">
+            <path fill="#00c1f4" fill-opacity="0.42" d="m 79.852143,67.582512 16.098725,8.723705 -0.05006,16.798905 -16.054397,10.522688 z"/>
+          </g>
+          <path fill="#86d6f8" fill-opacity="0.7" d="m 116.40385,118.60763 -23.209826,12.48015 0.129672 22.01042 23.088024 14.97045 z"/>
+          <path fill="#007a9a" fill-opacity="0.55" d="m 137.07317,139.07991 v -5.50824 l -14.7035,-7.6223 0.15632,34.1074 14.5367,-9.42625 -0.061,-5.09181 -2.36315,0.0113 0.0215,-4.21788 6.64454,-0.0144 -0.0758,11.78046 -15.95661,10.35346 -7.13142,4.61699 0.008,-49.46103 6.89061,3.70908 16.31909,8.77108 -0.0602,7.96409 z"/>
+          <path fill="#007a9a" fill-opacity="0.65" d="m 116.4039,118.60751 -23.209876,12.48027 0.129672 22.01042 23.087924 14.97038 z m -4.31654,7.26928 0.17948,34.31441 -15.110947,-9.8225 v -16.74265 z"/>
+        </g>
+      </svg>
+        <div style="line-height:1.2;">
+          <div style="font-family:Montserrat,sans-serif;font-weight:400;font-size:.95rem;letter-spacing:.1em;color:#fff;text-transform:uppercase;">DEFINED</div>
+          <div style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.48rem;letter-spacing:.1em;color:#00ADEF;text-transform:uppercase;">GLASS CREATIONS</div>
+        </div>
+      </div>
+      <p style="font-size:.82rem;color:#6b7280;line-height:1.7;max-width:260px;">At Defined Glass, we don't just install glass — we deliver an experience built on transparency, communication, and craftsmanship.</p>
+      <a href="https://www.instagram.com/definedglass/" target="_blank" aria-label="Defined Glass on Instagram" style="display:inline-flex;align-items:center;gap:.55rem;margin-top:1.25rem;color:#9ca3af;text-decoration:none;font-size:.82rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <span>@definedglass</span>
+      </a>
+    </div>
+    <div>
+      <h3 style="color:#fff;font-family:Montserrat,sans-serif;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.25rem;">Quick Links</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;">
+        <li><a href="/" data-page="home" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">Home</a></li>
+        <li><a href="/services/" data-page="services" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">Services</a></li>
+        <li><a href="/gallery/" data-page="gallery" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">Gallery</a></li>
+        <li><a href="/about/" data-page="about" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">About</a></li>
+        <li><a href="/contact/" data-page="contact" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">Contact</a></li>
+        <li><a href="/quote/" data-page="quote" style="color:#6b7280;font-size:.82rem;cursor:pointer;text-decoration:none;">Get A Quote</a></li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:#fff;font-family:Montserrat,sans-serif;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.25rem;">Services</h3>
+      <ul style="list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:.6rem;">
+        <li style="color:#6b7280;font-size:.82rem;">Frameless Shower Doors</li>
+        <li style="color:#6b7280;font-size:.82rem;">Custom Mirrors</li>
+        <li style="color:#6b7280;font-size:.82rem;">Glass Railings</li>
+        <li style="color:#6b7280;font-size:.82rem;">Office Partitions</li>
+        <li style="color:#6b7280;font-size:.82rem;">Storefronts</li>
+        <li style="color:#6b7280;font-size:.82rem;">Curtain Wall Systems</li>
+      </ul>
+    </div>
+    <div>
+      <h3 style="color:#fff;font-family:Montserrat,sans-serif;font-weight:700;font-size:.75rem;text-transform:uppercase;letter-spacing:.15em;margin-bottom:1.25rem;">Contact</h3>
+      <div style="display:flex;flex-direction:column;gap:.75rem;font-size:.82rem;">
+        <div><strong style="color:#d1d5db;display:block;margin-bottom:.2rem;">Showroom</strong><span style="color:#6b7280;">1179 Lakewood Farmingdale Rd<br/>Howell, NJ 07731</span></div>
+        <div><a href="tel:7327082580" style="color:#6b7280;text-decoration:none;">(732) 708-2580</a></div>
+        <div><a href="mailto:info@definedglass.com" style="color:#6b7280;text-decoration:none;">info@definedglass.com</a></div>
+        <div style="margin-top:.5rem;"><span onclick="showPage('quote')" style="background:#00ADEF;color:#fff;padding:8px 16px;border-radius:4px;font-size:.75rem;font-weight:700;text-transform:uppercase;cursor:pointer;display:inline-block;">Get A Free Quote</span></div>
+      </div>
+    </div>
+  </div>
+  <div style="border-top:1px solid #2d2d2d;padding-top:1.5rem;display:flex;justify-content:space-between;font-size:.75rem;color:#4b5563;">
+    <span>© 2026 Defined Glass Creations LLC. All rights reserved.</span>
+    <span>Licensed &amp; Insured · Serving NJ · PA · NY Since 2017</span>
+  </div>
+</footer>
+
+<script>
+  // ── SPA router: real URLs + history ─────────────────────
+  var PAGE_PATHS = { home: '/', services: '/services/', gallery: '/gallery/', about: '/about/', contact: '/contact/', quote: '/quote/' };
+  function pathToPage(path) {
+    path = (path || '/').replace(/\/+$/, '') || '/';
+    for (var k in PAGE_PATHS) {
+      var p = PAGE_PATHS[k].replace(/\/+$/, '') || '/';
+      if (p === path) return k;
+    }
+    return 'home';
+  }
+
+  function toggleMenu() {
+    var menu = document.getElementById('mobileMenu');
+    var btn = document.getElementById('menuBtn');
+    var open = menu.classList.toggle('open');
+    menu.style.display = open ? 'flex' : 'none';
+    btn.style.opacity = open ? '0.7' : '1';
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  }
+
+  function showPage(name, push) {
+    document.querySelectorAll('.page-section').forEach(s => s.classList.remove('active'));
+    var el = document.getElementById('page-' + name);
+    if (!el) { name = 'home'; el = document.getElementById('page-home'); }
+    el.classList.add('active');
+    if (push !== false && window.history && history.pushState) {
+      history.pushState({ page: name }, '', PAGE_PATHS[name]);
+      document.title = el.getAttribute('data-title') || document.title;
+    }
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  window.addEventListener('popstate', function() { showPage(pathToPage(location.pathname), false); });
+
+  document.addEventListener('click', function(e) {
+    var a = e.target.closest ? e.target.closest('a[data-page]') : null;
+    if (!a) return;
+    e.preventDefault();
+    showPage(a.getAttribute('data-page'));
+    var menu = document.getElementById('mobileMenu');
+    if (menu && menu.classList.contains('open')) toggleMenu();
+  });
+
+  // Open the right page on load (real URLs / generated pages)
+  showPage(window.INITIAL_PAGE || pathToPage(location.pathname), false);
+
+  // Hero background slideshow
+  (function() {
+    var total = 3, cur = 0;
+    function heroGoTo(n) {
+      document.getElementById('hero-slide-' + cur).style.opacity = '0';
+      document.querySelectorAll('.hero-dot')[cur].style.background = 'rgba(255,255,255,.4)';
+      cur = (n + total) % total;
+      document.getElementById('hero-slide-' + cur).style.opacity = '1';
+      document.querySelectorAll('.hero-dot')[cur].style.background = '#00ADEF';
+    }
+    window.heroGoTo = heroGoTo;
+    setInterval(function(){ heroGoTo(cur + 1); }, 5000);
+  })();
+
+  function initSlider(slidesId, dotsId) {
+    const slides = document.querySelectorAll('#' + slidesId + ' .slide');
+    const dots = document.querySelectorAll('#' + dotsId + ' .dot');
+    let cur = 0;
+    function goTo(n) {
+      slides[cur].style.opacity = '0'; slides[cur].style.zIndex = '0';
+      dots[cur].style.opacity = '.35';
+      cur = (n + slides.length) % slides.length;
+      slides[cur].style.opacity = '1'; slides[cur].style.zIndex = '1';
+      dots[cur].style.opacity = '1';
+    }
+    dots.forEach((d, i) => d.addEventListener('click', () => goTo(i)));
+    setInterval(() => goTo(cur + 1), 3800);
+  }
+  initSlider('res-slides', 'res-dots');
+  initSlider('com-slides', 'com-dots');
+
+  function filterGallery(cat, btn) {
+    document.querySelectorAll('#galleryFilters button').forEach(b => {
+      b.style.background = '#f5f5f5'; b.style.color = '#6b7280';
+    });
+    btn.style.background = '#00ADEF'; btn.style.color = '#fff';
+    document.querySelectorAll('.gallery-photo').forEach(el => {
+      if (cat === 'All' || el.dataset.cat === cat) { el.style.display = 'block'; }
+      else { el.style.display = 'none'; }
+    });
+  }
+
+  // Build gallery from gallery-config.js
+  function buildGallery() {
+    var grid = document.getElementById('galleryGrid');
+    if (!grid || typeof GALLERY_PHOTOS === 'undefined') return;
+    grid.innerHTML = '';
+    // Sort newest first: highest number in filename = most recently added
+    var sorted = GALLERY_PHOTOS.slice().sort(function(a, b) {
+      var numA = parseInt((a.src.match(/-(\d+)\.jpg$/) || [,0])[1]);
+      var numB = parseInt((b.src.match(/-(\d+)\.jpg$/) || [,0])[1]);
+      return numB - numA;
+    });
+    sorted.forEach(function(photo) {
+      var div = document.createElement('div');
+      div.className = 'gallery-photo';
+      div.dataset.cat = photo.cat;
+      div.style.cssText = 'break-inside:avoid;margin-bottom:1rem;border-radius:10px;overflow:hidden;cursor:pointer;';
+      div.onclick = function() { openLightbox(this); };
+      var img = document.createElement('img');
+      img.src = photo.src.replace('/public/images/', '/public/images/thumbs/');
+      img.dataset.full = photo.src;
+      img.alt = photo.alt;
+      img.loading = 'lazy';
+      img.decoding = 'async';
+      img.style.cssText = 'width:100%;display:block;';
+      img.onerror = function() {
+        if (!this.dataset.retried) {
+          // thumbnail missing - fall back to full image
+          this.dataset.retried = '1';
+          this.src = photo.src;
+          return;
+        }
+        this.style.display = 'none';
+        this.parentElement.style.background = '#1a3a4a';
+        this.parentElement.style.minHeight = '220px';
+      };
+      div.appendChild(img);
+      grid.appendChild(div);
+    });
+  }
+  buildGallery();
+
+  // Lightbox
+  var lbPhotos = [], lbIndex = 0;
+
+  function openLightbox(el) {
+    lbPhotos = Array.from(document.querySelectorAll('.gallery-photo')).filter(function(p) {
+      return p.style.display !== 'none';
+    });
+    lbIndex = lbPhotos.indexOf(el);
+    showLightboxPhoto();
+    var lb = document.getElementById('lightbox');
+    lb.style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+  }
+
+  function showLightboxPhoto() {
+    var img = lbPhotos[lbIndex].querySelector('img');
+    document.getElementById('lightbox-img').src = img ? (img.dataset.full || img.src) : '';
+    document.getElementById('lightbox-img').alt = img ? img.alt : '';
+    document.getElementById('lightbox-caption').textContent =
+      (img ? img.alt : '') + '  (' + (lbIndex + 1) + ' / ' + lbPhotos.length + ')';
+  }
+
+  function lightboxNav(dir) {
+    lbIndex = (lbIndex + dir + lbPhotos.length) % lbPhotos.length;
+    showLightboxPhoto();
+  }
+
+  function closeLightbox() {
+    document.getElementById('lightbox').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (document.getElementById('lightbox').style.display === 'none') return;
+    if (e.key === 'ArrowRight') lightboxNav(1);
+    else if (e.key === 'ArrowLeft') lightboxNav(-1);
+    else if (e.key === 'Escape') closeLightbox();
+  });
+
+  // Touch swipe support for mobile
+  (function() {
+    var startX = 0;
+    var lb = document.getElementById('lightbox');
+    lb.addEventListener('touchstart', function(e) { startX = e.touches[0].clientX; }, { passive: true });
+    lb.addEventListener('touchend', function(e) {
+      var diff = startX - e.changedTouches[0].clientX;
+      if (Math.abs(diff) > 50) lightboxNav(diff > 0 ? 1 : -1);
+    });
+  })();
+</script>
+</body>
+</html>
