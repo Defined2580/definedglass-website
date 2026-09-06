@@ -88,10 +88,11 @@ async function listFolder(token, driveId, folderPath) {
   return (data.value || []).filter(i => i.file && /\.(jpe?g|png)$/i.test(i.name));
 }
 
-async function downloadBuf(item) {
-  const url = item['@microsoft.graph.downloadUrl'];
-  if (!url) throw new Error(`no download URL for ${item.name}`);
-  const res = await fetch(url);
+async function downloadBuf(token, driveId, item) {
+  // $select on the folder listing strips @microsoft.graph.downloadUrl, so
+  // fetch bytes through the authenticated /content endpoint instead.
+  const url = `https://graph.microsoft.com/v1.0/drives/${driveId}/items/${item.id}/content`;
+  const res = await fetch(url, { headers: { Authorization: `Bearer ${token}` }, redirect: 'follow' });
   if (!res.ok) throw new Error(`download failed ${res.status} for ${item.name}`);
   return Buffer.from(await res.arrayBuffer());
 }
@@ -209,7 +210,7 @@ async function main() {
       const local = `public/images/${c.dest}/${c.prefix}-${num}.jpg`;
       log(`  + ${item.name} -> ${c.prefix}-${num}.jpg${existing ? ' (updated)' : ''}`);
       if (!dryRun) {
-        const buf = await downloadBuf(item);
+        const buf = await downloadBuf(token, drive.id, item);
         await processImage(buf, local, local.replace('/public/images/', '/public/images/thumbs/'));
         byRemoteId[item.id] = {
           local, num, cat: c.cat, dest: c.dest, prefix: c.prefix,
