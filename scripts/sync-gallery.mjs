@@ -42,6 +42,14 @@ const CATEGORIES = [
 ];
 
 const MANIFEST_PATH = 'gallery-sync-manifest.json';
+
+// Photos the owner removed from the site gallery (cone photo, ladder photo,
+// 2026-09-04 recuration). They stay in SharePoint but never go on the site.
+const EXCLUDE_NAMES = new Set([
+  'IMG-20250211-WA0014.jpg', // traffic cone in frame (was exterior-1)
+  'IMG-20230418-WA0028.jpg', // ladder in frame (was exterior-3)
+]);
+
 const WATERMARK = fs.existsSync('public/favicon.svg') ? 'public/favicon.svg' : 'public/logo.png';
 const ALT_BY_CAT = {
   shower: 'Frameless shower door installation',
@@ -194,6 +202,7 @@ async function main() {
     const usedNums = new Set(Object.values(byRemoteId).filter(i => i.cat === c.cat).map(i => i.num));
     let nextNum = Math.max(0, ...usedNums) + 1;
     for (const item of remote) {
+      if (EXCLUDE_NAMES.has(item.name)) { log(`  x skip ${item.name} (owner-removed)`); continue; }
       const existing = byRemoteId[item.id];
       if (existing && existing.eTag === item.eTag) continue;
       const num = existing ? existing.num : nextNum++;
