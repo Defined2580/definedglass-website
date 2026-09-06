@@ -101,6 +101,9 @@
     @media (max-width: 480px) {
       #galleryGrid { columns: 1 !important; }
     }
+    @media (max-width: 900px) {
+      #page-contact .contact-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
+    }
     /* Lightbox */
     #lightbox { touch-action: pan-y; }
     #lightbox-prev, #lightbox-next {
@@ -653,7 +656,7 @@
     <p style="color:#d1d5db;font-size:1rem;">Have a question or ready to start your project? We'd love to hear from you.</p>
   </section>
   <section style="padding:5rem 2rem;background:#fff;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:2fr 3fr;gap:4rem;">
+    <div class="contact-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
       <!-- Info -->
       <div style="display:flex;flex-direction:column;gap:2rem;">
         <div>
@@ -684,18 +687,16 @@
           <p style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.1rem;color:#3d3d3d;">NJ · PA · NY</p>
         </div>
       </div>
-      <!-- Form -->
-      <div style="background:#f8f8f8;border-radius:16px;padding:2.5rem;border:1px solid #f0f0f0;">
-        <h2 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:.5rem;">Send Us a Message</h2>
-        <p style="color:#6b7280;font-size:.85rem;margin-bottom:2rem;">For a detailed project quote, use our <span style="color:#00ADEF;cursor:pointer;" onclick="showPage('quote')">Get A Quote tool →</span></p>
-        <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-bottom:1rem;">
-          <div><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Full Name *</label><input type="text" placeholder="John Smith" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
-          <div><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Phone</label><input type="tel" placeholder="(732) 555-0000" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
+      <!-- Quote CTA (replaces the old dead contact form) -->
+      <div style="background:#f8f8f8;border-radius:16px;padding:2.5rem;border:1px solid #f0f0f0;display:flex;flex-direction:column;justify-content:center;">
+        <h2 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:1.4rem;margin-bottom:.5rem;">Start With a Free Quote</h2>
+        <p style="color:#6b7280;font-size:.85rem;line-height:1.7;margin-bottom:1.5rem;">The fastest way to reach us: our online quote tool. Tell us about your project, upload photos, and it goes straight to our team - we usually respond within 24 hours.</p>
+        <a href="/quote/" data-page="quote" style="display:block;text-align:center;background:#00ADEF;color:#fff;padding:14px;border-radius:8px;font-weight:700;font-size:.875rem;text-transform:uppercase;letter-spacing:.05em;text-decoration:none;">Get A Free Quote</a>
+        <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap;">
+          <a href="tel:7327082580" style="color:#00ADEF;font-size:.85rem;font-weight:600;text-decoration:none;">Call (732) 708-2580</a>
+          <span style="color:#d1d5db;">·</span>
+          <a href="mailto:info@definedglass.com" style="color:#00ADEF;font-size:.85rem;font-weight:600;text-decoration:none;">info@definedglass.com</a>
         </div>
-        <div style="margin-bottom:1rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Email *</label><input type="email" placeholder="you@example.com" style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;box-sizing:border-box;" /></div>
-        <div style="margin-bottom:1rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Service</label><select style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;background:#fff;box-sizing:border-box;"><option>Select a service...</option><option>Frameless Shower Doors</option><option>Custom Mirrors</option><option>Glass Railings</option><option>Office Partitions</option><option>Storefront</option><option>Curtain Wall System</option></select></div>
-        <div style="margin-bottom:1.5rem;"><label style="display:block;font-size:.8rem;font-weight:600;margin-bottom:.4rem;">Message *</label><textarea rows="4" placeholder="Tell us about your project..." style="width:100%;padding:10px 14px;border:1px solid #e5e7eb;border-radius:8px;font-size:.875rem;outline:none;resize:none;box-sizing:border-box;"></textarea></div>
-        <button style="width:100%;background:#00ADEF;color:#fff;border:none;padding:14px;border-radius:8px;font-weight:700;font-size:.875rem;text-transform:uppercase;letter-spacing:.05em;cursor:pointer;">Send Message</button>
       </div>
     </div>
   </section>
