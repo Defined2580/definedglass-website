@@ -85,6 +85,11 @@
     @media (max-width: 480px) {
       #galleryGrid { columns: 1 !important; }
     }
+    @media (max-width: 768px) {
+      .m-stack { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+      #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -198,7 +203,7 @@
     <p style="color:#d1d5db;font-size:1rem;">Have a question or ready to start your project? We'd love to hear from you.</p>
   </section>
   <section style="padding:5rem 2rem;background:#fff;">
-    <div class="contact-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+    <div class="m-stack contact-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
       <!-- Info -->
       <div style="display:flex;flex-direction:column;gap:2rem;">
         <div>
@@ -250,7 +255,7 @@
 
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
 <footer style="background:#0A0F1E;color:#9ca3af;padding:4rem 2rem 2rem;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
+  <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
     <div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="46" height="45" style="flex-shrink:0;display:block;">

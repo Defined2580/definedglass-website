@@ -86,6 +86,11 @@
     @media (max-width: 480px) {
       #galleryGrid { columns: 1 !important; }
     }
+    @media (max-width: 768px) {
+      .m-stack { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+      #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -298,7 +303,7 @@
 
   <!-- Why Us -->
   <section style="padding:6rem 2rem;background:#F0F8FF;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
       <div>
         <span class="section-label">Why Defined Glass</span>
         <h2 class="section-heading" style="font-size:clamp(1.8rem,3.5vw,2.75rem);margin-bottom:1.5rem;">We're All In — From the First Call to the Final Install</h2>
@@ -308,7 +313,7 @@
           <span style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;text-transform:uppercase;font-size:.875rem;border-radius:4px;cursor:pointer;" onclick="showPage('gallery')">View Our Work</span>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+      <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
         <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
           <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
           <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Craftsmanship</h3>
@@ -340,7 +345,7 @@
         <span class="section-label">At A Glance</span>
         <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-top:.25rem;">Our Work — Residential &amp; Commercial</h2>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
 
         <!-- Residential Slider -->
         <div>
@@ -571,7 +576,7 @@
   </section>
   <!-- Mission -->
   <section style="padding:5rem 2rem;background:#fff;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
       <div>
         <span class="section-label">Who We Are</span>
         <h2 class="section-heading" style="font-size:2rem;margin-bottom:1.5rem;">Defined Glass Creations</h2>
@@ -592,7 +597,7 @@
   </section>
   <!-- Stats -->
   <section style="padding:4rem 2rem;background:#F0F8FF;">
-    <div style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
+    <div class="m-two" style="max-width:1000px;margin:0 auto;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;text-align:center;">
       <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">NJ·PA·NY</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Service Area</p></div>
       <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">100%</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Custom Fabrication</p></div>
       <div><p style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;color:#00ADEF;">6</p><p style="font-size:.75rem;color:#6b7280;text-transform:uppercase;letter-spacing:.1em;font-weight:600;">Core Service Lines</p></div>
@@ -606,7 +611,7 @@
         <span class="section-label">What Drives Us</span>
         <h2 class="section-heading" style="font-size:2rem;">Our Core Values</h2>
       </div>
-      <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
+      <div class="m-stack" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.25rem;">
         <div class="value-card" style="border:1px solid #f0f0f0;border-radius:12px;padding:1.5rem;transition:all .3s;">
           <div style="display:flex;align-items:center;gap:.75rem;margin-bottom:.75rem;"><span style="background:#00ADEF;color:#fff;width:32px;height:32px;border-radius:6px;display:flex;align-items:center;justify-content:center;font-family:Montserrat,sans-serif;font-weight:800;font-size:.75rem;">01</span><strong style="font-family:Montserrat,sans-serif;">Transparency &amp; Communication</strong></div>
           <p style="font-size:.82rem;color:#6b7280;line-height:1.6;">No hidden costs, no surprises. We keep the lines open so you always know exactly where your project stands.</p>
@@ -646,7 +651,7 @@
     <p style="color:#d1d5db;font-size:1rem;">Have a question or ready to start your project? We'd love to hear from you.</p>
   </section>
   <section style="padding:5rem 2rem;background:#fff;">
-    <div class="contact-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
+    <div class="m-stack contact-grid" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;">
       <!-- Info -->
       <div style="display:flex;flex-direction:column;gap:2rem;">
         <div>
@@ -730,7 +735,7 @@
   <section style="padding:5rem 2rem;background:#fff;text-align:center;">
     <span class="section-label">The Process</span>
     <h2 class="section-heading" style="font-size:2rem;margin-bottom:3rem;">What Happens Next</h2>
-    <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
+    <div class="m-stack" style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">01</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Submit Your Info</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Fill out the configurator above with your project details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">02</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">We Review &amp; Follow Up</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Our team reviews your submission and reaches out to confirm details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">03</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Get Your Quote</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">A clear, itemized quote — no surprises, no fine print.</p></div>
@@ -740,7 +745,7 @@
 
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
 <footer style="background:#0A0F1E;color:#9ca3af;padding:4rem 2rem 2rem;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
+  <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
     <div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="46" height="45" style="flex-shrink:0;display:block;">

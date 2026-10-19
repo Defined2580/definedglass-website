@@ -85,6 +85,11 @@
     @media (max-width: 480px) {
       #galleryGrid { columns: 1 !important; }
     }
+    @media (max-width: 768px) {
+      .m-stack { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+      #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -297,7 +302,7 @@
 
   <!-- Why Us -->
   <section style="padding:6rem 2rem;background:#F0F8FF;">
-    <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
+    <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;">
       <div>
         <span class="section-label">Why Defined Glass</span>
         <h2 class="section-heading" style="font-size:clamp(1.8rem,3.5vw,2.75rem);margin-bottom:1.5rem;">We're All In — From the First Call to the Final Install</h2>
@@ -307,7 +312,7 @@
           <span style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;text-transform:uppercase;font-size:.875rem;border-radius:4px;cursor:pointer;" onclick="showPage('gallery')">View Our Work</span>
         </div>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
+      <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:1.25rem;">
         <div class="value-card" style="background:#fff;border:1px solid #e5e7eb;border-radius:12px;padding:1.5rem;transition:all .3s;">
           <div style="width:40px;height:40px;background:#00ADEF;border-radius:8px;display:flex;align-items:center;justify-content:center;margin-bottom:1rem;color:#fff;font-size:1.25rem;">✓</div>
           <h3 style="font-family:Montserrat,sans-serif;font-weight:700;margin-bottom:.5rem;font-size:.95rem;">Craftsmanship</h3>
@@ -339,7 +344,7 @@
         <span class="section-label">At A Glance</span>
         <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2rem,4vw,3rem);color:#fff;margin-top:.25rem;">Our Work — Residential &amp; Commercial</h2>
       </div>
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+      <div class="m-stack" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
 
         <!-- Residential Slider -->
         <div>
@@ -462,7 +467,7 @@
 
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
 <footer style="background:#0A0F1E;color:#9ca3af;padding:4rem 2rem 2rem;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
+  <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
     <div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="46" height="45" style="flex-shrink:0;display:block;">

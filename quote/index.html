@@ -85,6 +85,11 @@
     @media (max-width: 480px) {
       #galleryGrid { columns: 1 !important; }
     }
+    @media (max-width: 768px) {
+      .m-stack { grid-template-columns: 1fr !important; gap: 2rem !important; }
+      .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
+      #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -230,7 +235,7 @@
   <section style="padding:5rem 2rem;background:#fff;text-align:center;">
     <span class="section-label">The Process</span>
     <h2 class="section-heading" style="font-size:2rem;margin-bottom:3rem;">What Happens Next</h2>
-    <div style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
+    <div class="m-stack" style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">01</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Submit Your Info</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Fill out the configurator above with your project details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">02</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">We Review &amp; Follow Up</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Our team reviews your submission and reaches out to confirm details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">03</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Get Your Quote</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">A clear, itemized quote — no surprises, no fine print.</p></div>
@@ -240,7 +245,7 @@
 
 <!-- ══ FOOTER ══════════════════════════════════════════════════════════════ -->
 <footer style="background:#0A0F1E;color:#9ca3af;padding:4rem 2rem 2rem;">
-  <div style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
+  <div class="m-stack" style="max-width:1280px;margin:0 auto;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.5fr;gap:3rem;margin-bottom:3rem;">
     <div>
       <div style="display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="90 118 54 53" width="46" height="45" style="flex-shrink:0;display:block;">
