@@ -1,11 +1,13 @@
 /*
-  Builds real, crawlable URLs from index.html (the single source of truth).
+  Builds real, crawlable URLs from site-template.html (the single source of truth).
   GitHub Pages serves /services/ -> services/index.html etc., each with its
-  own <title>, meta description, canonical URL and initial view.
-  Run after editing index.html:  node scripts/build-pages.js
+  own <title>, meta description, canonical URL and only its own page section.
+  Also compiles site.css (Tailwind) so the browser doesn't run Tailwind itself.
+  Run after editing site-template.html:  node scripts/build-pages.js
 */
 const fs = require('fs');
 const path = require('path');
+const { execSync } = require('child_process');
 
 const BASE = 'https://definedglass.com';
 const PAGES = {
@@ -42,10 +44,21 @@ const PAGES = {
 };
 
 const esc = (s) => s.replace(/&/g, '&amp;').replace(/"/g, '&quot;');
-let master = fs.readFileSync('index.html', 'utf8');
+let master = fs.readFileSync('site-template.html', 'utf8')
+  .replace(/\r?\n<!-- Master template[^>]*-->/, '');
 
-// home values currently in master (anchors for replacement)
-const home = PAGES.home;
+// Keep only one page section; the other pages live at their own URLs
+const SECTION_RE = /<div id="page-([a-z]+)" [^>]*class="page-section[^"]*">[\s\S]*?\r?\n<\/div>\r?\n/g;
+function onlySection(html, slug) {
+  let kept = 0;
+  const out = html.replace(SECTION_RE, (block, name) => {
+    if (name !== slug) return '';
+    kept++;
+    return block.replace(/class="page-section[^"]*"/, 'class="page-section active"');
+  });
+  if (kept !== 1) throw new Error(`page-${slug} section not found`);
+  return out;
+}
 
 for (const [slug, p] of Object.entries(PAGES)) {
   let html = master;
@@ -57,11 +70,14 @@ for (const [slug, p] of Object.entries(PAGES)) {
   html = html.replace(/<meta property="og:description" content="[^"]*" \/>/, `<meta property="og:description" content="${esc(p.desc)}" />`);
   html = html.replace(/<meta property="og:url" content="[^"]*" \/>/, `<meta property="og:url" content="${url}" />`);
   html = html.replace(/window\.INITIAL_PAGE = '[a-z]+';/, `window.INITIAL_PAGE = '${slug}';`);
-  if (slug === 'home') continue; // master itself is home
-  fs.mkdirSync(p.dir, { recursive: true });
-  fs.writeFileSync(path.join(p.dir, 'index.html'), html);
-  console.log(`wrote ${p.dir}/index.html`);
+  html = onlySection(html, slug);
+  const file = p.dir ? path.join(p.dir, 'index.html') : 'index.html';
+  if (p.dir) fs.mkdirSync(p.dir, { recursive: true });
+  fs.writeFileSync(file, html);
+  console.log(`wrote ${file}`);
+  // Unknown paths show the home page
+  if (slug === 'home') { fs.writeFileSync('404.html', html); console.log('wrote 404.html'); }
 }
-// SPA fallback: unknown paths render the home page
-fs.writeFileSync('404.html', master);
-console.log('wrote 404.html');
+
+execSync('npx --yes tailwindcss@3.4.17 -c scripts/tailwind.site.config.js -i scripts/site.tailwind.css -o site.css --minify', { stdio: 'inherit' });
+console.log('wrote site.css');
