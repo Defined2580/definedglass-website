@@ -91,6 +91,16 @@
       .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
       #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
     }
+    #mobileActionBar { display:none; }
+    @media (max-width: 768px) {
+      #mobileActionBar { display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; box-shadow:0 -2px 12px rgba(0,0,0,.12); padding-bottom:env(safe-area-inset-bottom); background:#fff; }
+      #mobileActionBar a { flex:1; text-align:center; padding:15px 8px; font-family:Montserrat,sans-serif; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:.04em; text-decoration:none; color:#00ADEF; background:#fff; }
+      #mobileActionBar a.mab-quote { background:#00ADEF; color:#fff; }
+      body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+      .quote-hero { padding: 2.5rem 1.25rem 2rem !important; }
+      .quote-hero h2 { margin-bottom: .75rem !important; }
+      footer li a, footer a { display:inline-block; padding:6px 0; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -124,7 +134,7 @@
   <!-- Top bar -->
   <div style="background:#00ADEF;color:#fff;font-size:.85rem;padding:7px 0;font-weight:500;">
     <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;">
-      <span>📞 (732) 708-2580 &nbsp;|&nbsp; ✉ info@definedglass.com</span>
+      <span><a href="tel:+17327082580" style="color:#fff;text-decoration:none;">📞 (732) 708-2580</a> &nbsp;|&nbsp; <a href="mailto:info@definedglass.com" style="color:#fff;text-decoration:none;">✉ info@definedglass.com</a></span>
       <span class="top-bar-right" style="opacity:.8;">Licensed &amp; Insured · Free Estimates · Fast Response</span>
     </div>
   </div>
@@ -210,8 +220,8 @@
             Premium glass solutions for residential and commercial spaces — craftsmanship you can see through.
           </p>
           <div style="display:flex;gap:.9rem;flex-wrap:wrap;">
-            <span class="btn-primary" onclick="showPage('services')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">View Our Services</span>
-            <span class="btn-outline" onclick="showPage('quote')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">Get A Free Quote</span>
+            <span class="btn-primary" onclick="showPage('quote')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">Get A Free Quote</span>
+            <span class="btn-outline" onclick="showPage('services')" style="cursor:pointer;font-size:.9rem;padding:14px 30px;">View Our Services</span>
           </div>
           <p style="color:rgba(255,255,255,.65);font-size:.72rem;font-weight:600;letter-spacing:.18em;text-transform:uppercase;margin-top:1.75rem;">Licensed &amp; Insured &nbsp;·&nbsp; Since 2017 &nbsp;·&nbsp; NJ · PA · NY</p>
         </div>
@@ -532,7 +542,7 @@
   <!-- CTA -->
   <section style="padding:4rem 2rem;background:#00ADEF;text-align:center;color:#fff;">
     <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;margin-bottom:1rem;">Have a Project in Mind?</h2>
-    <p style="color:rgba(255,255,255,.85);margin-bottom:2rem;">Use our Smart Glazier configurator to get a quick quote, or reach out directly.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:2rem;">Use our online quote form for a quick quote, or reach out directly.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <span style="background:#fff;color:#00ADEF;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('quote')">Get A Free Quote</span>
       <span style="border:2px solid #fff;color:#fff;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('contact')">Contact Us</span>
@@ -690,6 +700,8 @@
         <div style="display:flex;gap:1rem;justify-content:center;margin-top:1.25rem;flex-wrap:wrap;">
           <a href="tel:7327082580" style="color:#00ADEF;font-size:.85rem;font-weight:600;text-decoration:none;">Call (732) 708-2580</a>
           <span style="color:#d1d5db;">·</span>
+          <a href="sms:+17327082580" style="color:#00ADEF;font-size:.85rem;font-weight:600;text-decoration:none;">Text us a photo</a>
+          <span style="color:#d1d5db;">·</span>
           <a href="mailto:info@definedglass.com" style="color:#00ADEF;font-size:.85rem;font-weight:600;text-decoration:none;">info@definedglass.com</a>
         </div>
       </div>
@@ -701,15 +713,19 @@
 <!--  QUOTE PAGE                                                            -->
 <!-- ══════════════════════════════════════════════════════════════════════ -->
 <div id="page-quote" data-title="Get A Free Quote | Defined Glass Creations" class="page-section">
-  <section class="dark-bg" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
+  <section class="dark-bg quote-hero" style="padding:7rem 2rem 4rem;text-align:center;color:#fff;">
     <p style="color:#B8E4FF;font-size:.75rem;font-weight:700;letter-spacing:.3em;text-transform:uppercase;margin-bottom:1rem;">Start Your Project</p>
     <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:clamp(2.5rem,6vw,4rem);margin-bottom:1.5rem;">Get A Quote</h2>
     <p style="color:#d1d5db;font-size:1rem;max-width:580px;margin:0 auto;line-height:1.7;">Tell us about your project and we'll get back to you with a clear, no-obligation quote — usually within 24 hours.</p>
   </section>
   <section class="quote-wrap" style="padding:3rem 2rem;background:#f8f8f8;">
     <div style="max-width:900px;margin:0 auto;">
+      <!-- iframe embed -->
+      <div class="quote-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid #f0f0f0;overflow:hidden;padding:1rem;">
+        <iframe id="quoteFrame" src="https://webusd.smartglazier.com/DEF/LiteApp/?xti=31/ #/" width="100%" style="border:none;min-height:600px;display:block;" title="Defined Glass Quote Tool"></iframe>
+      </div>
       <!-- Trust badges -->
-      <div style="display:flex;justify-content:center;gap:3rem;margin-bottom:2rem;flex-wrap:wrap;">
+      <div style="display:flex;justify-content:center;gap:3rem;margin-top:2rem;flex-wrap:wrap;">
         <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Free Quote</span>
         <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> No Obligation</span>
         <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Fast Response</span>
@@ -717,16 +733,12 @@
         <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> Since 2017</span>
         <span style="font-size:.85rem;color:#6b7280;display:flex;align-items:center;gap:.4rem;"><span style="color:#00ADEF;font-weight:700;">✓</span> NJ · PA · NY</span>
       </div>
-      <!-- iframe embed -->
-      <div class="quote-card" style="background:#fff;border-radius:16px;box-shadow:0 2px 20px rgba(0,0,0,.06);border:1px solid #f0f0f0;overflow:hidden;padding:1rem;">
-        <iframe id="quoteFrame" src="https://webusd.smartglazier.com/DEF/LiteApp/?xti=31/ #/" width="100%" style="border:none;min-height:600px;display:block;" title="Defined Glass Quote Tool"></iframe>
-      </div>
       <!-- Fallback -->
       <div style="text-align:center;margin-top:2.5rem;">
         <p style="color:#6b7280;font-size:.875rem;margin-bottom:1rem;">Prefer to speak with someone?</p>
         <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
           <a href="tel:7327082580" class="btn-primary">Call (732) 708-2580</a>
-          <span style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;font-size:.875rem;text-transform:uppercase;border-radius:4px;cursor:pointer;" onclick="showPage('contact')">Send a Message</span>
+          <a href="sms:+17327082580" style="display:inline-block;border:2px solid #00ADEF;color:#00ADEF;padding:12px 28px;font-weight:700;font-size:.875rem;text-transform:uppercase;border-radius:4px;text-decoration:none;">Text Us a Photo</a>
         </div>
       </div>
     </div>
@@ -736,7 +748,7 @@
     <span class="section-label">The Process</span>
     <h2 class="section-heading" style="font-size:2rem;margin-bottom:3rem;">What Happens Next</h2>
     <div class="m-stack" style="max-width:800px;margin:0 auto;display:grid;grid-template-columns:repeat(3,1fr);gap:2.5rem;">
-      <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">01</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Submit Your Info</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Fill out the configurator above with your project details.</p></div>
+      <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">01</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Submit Your Info</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Fill out the quote form above with your project details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">02</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">We Review &amp; Follow Up</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">Our team reviews your submission and reaches out to confirm details.</p></div>
       <div><div style="width:56px;height:56px;background:#00ADEF;border-radius:50%;display:flex;align-items:center;justify-content:center;color:#fff;font-family:Montserrat,sans-serif;font-weight:900;font-size:1.1rem;margin:0 auto 1.25rem;">03</div><h3 style="font-family:Montserrat,sans-serif;font-weight:700;font-size:.95rem;margin-bottom:.5rem;">Get Your Quote</h3><p style="font-size:.82rem;color:#6b7280;line-height:1.6;">A clear, itemized quote — no surprises, no fine print.</p></div>
     </div>
@@ -810,6 +822,12 @@
     <span>Licensed &amp; Insured · Serving NJ · PA · NY Since 2017</span>
   </div>
 </footer>
+
+<!-- Phone-only action bar -->
+<nav id="mobileActionBar" aria-label="Quick contact">
+  <a href="tel:+17327082580">📞 Call</a>
+  <a href="/quote/" data-page="quote" class="mab-quote">Free Quote</a>
+</nav>
 
 <script>
   // ── SPA router: real URLs + history ─────────────────────

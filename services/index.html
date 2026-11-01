@@ -90,6 +90,16 @@
       .m-two { grid-template-columns: 1fr 1fr !important; gap: 1.5rem !important; }
       #galleryFilters { flex-wrap: wrap; justify-content: center; padding: .75rem 1rem !important; }
     }
+    #mobileActionBar { display:none; }
+    @media (max-width: 768px) {
+      #mobileActionBar { display:flex; position:fixed; left:0; right:0; bottom:0; z-index:60; box-shadow:0 -2px 12px rgba(0,0,0,.12); padding-bottom:env(safe-area-inset-bottom); background:#fff; }
+      #mobileActionBar a { flex:1; text-align:center; padding:15px 8px; font-family:Montserrat,sans-serif; font-weight:700; font-size:1rem; text-transform:uppercase; letter-spacing:.04em; text-decoration:none; color:#00ADEF; background:#fff; }
+      #mobileActionBar a.mab-quote { background:#00ADEF; color:#fff; }
+      body { padding-bottom: calc(56px + env(safe-area-inset-bottom)); }
+      .quote-hero { padding: 2.5rem 1.25rem 2rem !important; }
+      .quote-hero h2 { margin-bottom: .75rem !important; }
+      footer li a, footer a { display:inline-block; padding:6px 0; }
+    }
     @media (max-width: 640px) {
       .quote-wrap { padding: 2rem .5rem !important; }
       .quote-card { padding: 0 !important; border-radius: 8px !important; }
@@ -123,7 +133,7 @@
   <!-- Top bar -->
   <div style="background:#00ADEF;color:#fff;font-size:.85rem;padding:7px 0;font-weight:500;">
     <div style="max-width:1280px;margin:0 auto;padding:0 2rem;display:flex;justify-content:space-between;">
-      <span>📞 (732) 708-2580 &nbsp;|&nbsp; ✉ info@definedglass.com</span>
+      <span><a href="tel:+17327082580" style="color:#fff;text-decoration:none;">📞 (732) 708-2580</a> &nbsp;|&nbsp; <a href="mailto:info@definedglass.com" style="color:#fff;text-decoration:none;">✉ info@definedglass.com</a></span>
       <span class="top-bar-right" style="opacity:.8;">Licensed &amp; Insured · Free Estimates · Fast Response</span>
     </div>
   </div>
@@ -267,7 +277,7 @@
   <!-- CTA -->
   <section style="padding:4rem 2rem;background:#00ADEF;text-align:center;color:#fff;">
     <h2 style="font-family:Montserrat,sans-serif;font-weight:900;font-size:2rem;margin-bottom:1rem;">Have a Project in Mind?</h2>
-    <p style="color:rgba(255,255,255,.85);margin-bottom:2rem;">Use our Smart Glazier configurator to get a quick quote, or reach out directly.</p>
+    <p style="color:rgba(255,255,255,.85);margin-bottom:2rem;">Use our online quote form for a quick quote, or reach out directly.</p>
     <div style="display:flex;gap:1rem;justify-content:center;flex-wrap:wrap;">
       <span style="background:#fff;color:#00ADEF;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('quote')">Get A Free Quote</span>
       <span style="border:2px solid #fff;color:#fff;padding:12px 28px;border-radius:4px;font-weight:700;font-size:.875rem;text-transform:uppercase;cursor:pointer;" onclick="showPage('contact')">Contact Us</span>
@@ -358,6 +368,12 @@
     <span>Licensed &amp; Insured · Serving NJ · PA · NY Since 2017</span>
   </div>
 </footer>
+
+<!-- Phone-only action bar -->
+<nav id="mobileActionBar" aria-label="Quick contact">
+  <a href="tel:+17327082580">📞 Call</a>
+  <a href="/quote/" data-page="quote" class="mab-quote">Free Quote</a>
+</nav>
 
 <script>
   // ── SPA router: real URLs + history ─────────────────────
