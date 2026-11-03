@@ -1,4 +1,11 @@
 User-agent: *
 Allow: /
+Disallow: /preview.html
+Disallow: /site-template.html
+Disallow: /src/
+Disallow: /scripts/
+Disallow: /*.md$
+Disallow: /*.ps1$
+Disallow: /gallery-sync-manifest.json
 
 Sitemap: https://definedglass.com/sitemap.xml

@@ -79,5 +79,13 @@ for (const [slug, p] of Object.entries(PAGES)) {
   if (slug === 'home') { fs.writeFileSync('404.html', html); console.log('wrote 404.html'); }
 }
 
+// Sitemap: lastmod = build date, so it stays current on every change
+const PRIORITY = { home: '1.0', services: '0.9', gallery: '0.9', about: '0.7', contact: '0.8', quote: '0.9' };
+const today = new Date().toISOString().slice(0, 10);
+const urls = Object.entries(PAGES).map(([slug, p]) =>
+  `  <url><loc>${p.dir ? `${BASE}/${p.dir}/` : `${BASE}/`}</loc><lastmod>${today}</lastmod><priority>${PRIORITY[slug] || '0.5'}</priority></url>`);
+fs.writeFileSync('sitemap.xml', `<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n${urls.join('\n')}\n</urlset>\n`);
+console.log('wrote sitemap.xml');
+
 execSync('npx --yes tailwindcss@3.4.17 -c scripts/tailwind.site.config.js -i scripts/site.tailwind.css -o site.css --minify', { stdio: 'inherit' });
 console.log('wrote site.css');
