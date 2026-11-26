@@ -1,0 +1,29 @@
+name: Keep scheduled workflows alive
+
+# GitHub turns off scheduled workflows after 60 days with no commit in the
+# repo. Gallery sync only commits when photos change, so a quiet stretch
+# can switch the Sunday sweep off. This job runs on the 1st of each month
+# and re-enables that workflow. It does not commit, and it does not touch
+# secrets or the ALLOW_DELETE setting.
+#
+# A fully quiet repo disables this schedule too. After that, run this
+# workflow once from the Actions tab (workflow_dispatch) to turn Gallery
+# sync back on.
+on:
+  schedule:
+    - cron: '0 12 1 * *'
+  workflow_dispatch:
+
+permissions:
+  actions: write
+
+jobs:
+  keepalive:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Re-enable Gallery sync
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh workflow enable gallery-sync.yml --repo "${GITHUB_REPOSITORY}"
+          gh workflow list --repo "${GITHUB_REPOSITORY}"
