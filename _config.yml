@@ -1,0 +1,25 @@
+# GitHub Pages publishes this repo from the main branch root and runs Jekyll
+# (there is no .nojekyll file). The exclude list is added to Jekyll's defaults.
+# These files stay in git. The gallery sync Action checks out the repo and
+# reads scripts/sync-gallery.mjs, gallery-sync-manifest.json, and
+# public/favicon.svg from that checkout. scripts/build-pages.js reads
+# site-template.html the same way. Jekyll just does not copy them to the
+# public site.
+exclude:
+  - CLAUDE.md
+  - SETUP.md
+  - SWEEP-SETUP.md
+  - site-template.html
+  - gallery-sync-manifest.json
+  - preview.html
+  - package.json
+  - package-lock.json
+  - tsconfig.json
+  - next.config.ts
+  - postcss.config.mjs
+  - tailwind.config.ts
+  - vercel.json
+  - sync-gallery.ps1
+  - src
+  - scripts
+  - node_modules
